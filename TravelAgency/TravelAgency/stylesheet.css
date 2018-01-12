@@ -95,8 +95,14 @@ div.start button:hover {
     background-color: #0f3bbb;
 }
 
+input.button {
+    background-color: #0f3bf2;
+    color: #ffffff;
+    border: none;
+}
+
 input.button:hover {
-    background-color: #cccccc;
+    background-color: #0f3bbb
 }
 
 @media only screen and (max-width:620px) {
