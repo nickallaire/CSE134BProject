@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Travel Info</title>
+        <link rel="stylesheet" href="stylesheet.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <img src="https://images.fineartamerica.com/images-medium-large-5/7-background-travel-concept-potowizard-thailand.jpg" alt="Logo" width="100%" height="250px" />
+                <div class="title">Travel Agency</div>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="bookflights.html">Flights</a></li>
+                <li><a href="bookhotels.html">Hotels</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="info">
+                <h1>Travel Information</h1>
+
+                <form name="travelinfo" action="next.html" method="get">
+                    Enter travel destination:
+                    <input type="text" name="destination" /><br /><br />
+                    Select a departure date:
+                    <input type="date" name="start-date" min="2018-01-11" /><br /><br />
+                    Select a return date:
+                    <input type="date" name="end-date" min="2018-01-12"<br /><br /><br />
+                    <input type="button" value="Enter" class="button" />
+                </form>
+            </div>
+            <div class="footer">
+                <h1>Copyright &copy; TravelAgency.com</h1>
+            </div>
+        </div>
+    </body>
+</html>

@@ -81,6 +81,11 @@ div.container {
     position: relative
 }
 
+div.start {
+    left: 50%;
+    top: 10%;
+}
+
 input.button:hover {
     background-color: #cccccc
 }

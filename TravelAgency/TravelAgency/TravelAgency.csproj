@@ -50,6 +50,8 @@
     <Content Include="bookhotels.html" />
     <Content Include="signup.html" />
     <Content Include="contact.html" />
+    <Content Include="travelinfo.html" />
+    <Content Include="personalinfo.html" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">

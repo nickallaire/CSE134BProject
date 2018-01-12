@@ -20,24 +20,14 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
-        <div class="destinations">
-            <img scr="" />
+
+        <div class="start">
+            <button onclick="location.href = 'personalinfo.html';" class="button">Start Itinerary</button>
         </div>
+
         <div class="info">
-            <form name="confirmation-number" action="confirmation.html" method="post">
-                Look up confirmation number:
-                <input type="text" name="conf-num" />
-                <input type="submit" value="Enter" class="button" />
-            </form>
             <br />
-            <form name="travel-info" action="travel-info.html" method="post">
-                Enter travel destinations<br />
-                <textarea name="travel-destinations" rows="5" cols="50" style="resize: none"></textarea>
-                <br />
-                <input type="submit" value="Enter" class="button" />
-            </form>
-            <br />
-            <form name="newsletter" action="/signup.html" method="get">
+            <form name="newsletter" action="signup.html" method="get">
                 Sign up for our newsletter:
                 <input type="email" name="email" />
                 <input type="submit" value="Sign up" class="button" />
