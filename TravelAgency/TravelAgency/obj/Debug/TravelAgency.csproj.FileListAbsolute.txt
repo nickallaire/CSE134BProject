@@ -1,0 +1,5 @@
+/Users/nsallaire/Documents/Developer/CSE134BProject/TravelAgency/TravelAgency/bin/TravelAgency.dll
+/Users/nsallaire/Documents/Developer/CSE134BProject/TravelAgency/TravelAgency/bin/TravelAgency.pdb
+/Users/nsallaire/Documents/Developer/CSE134BProject/TravelAgency/TravelAgency/obj/Debug/TravelAgency.csproj.CoreCompileInputs.cache
+/Users/nsallaire/Documents/Developer/CSE134BProject/TravelAgency/TravelAgency/obj/Debug/TravelAgency.dll
+/Users/nsallaire/Documents/Developer/CSE134BProject/TravelAgency/TravelAgency/obj/Debug/TravelAgency.pdb
