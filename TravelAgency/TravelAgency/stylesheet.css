@@ -54,12 +54,12 @@ div.footer {
     height: 50px
 }
 
-    div.footer h1 {
-        font-size: 14px;
-        text-align: center;
-        color: #ffffff;
-        transform: translate(0%, 50%)
-    }
+div.footer h1 {
+    font-size: 14px;
+    text-align: center;
+    color: #ffffff;
+    transform: translate(0%, 50%)
+}
 
 div.info {
     margin-left: 20px;
@@ -72,22 +72,31 @@ div.contact h1 {
     text-align: center
 }
 
-div.test {
-    padding-bottom: 50px
-}
-
 div.container {
     min-height: 100%;
     position: relative
 }
 
 div.start {
-    left: 50%;
-    top: 10%;
+    padding-top: 25px;
+    text-align: center;
+    height: 50px;
+}
+
+div.start button {
+    width: 100px;
+    height: 50px;
+    background-color: #0f3bf2;
+    color: #ffffff;
+    border: none;
+}
+
+div.start button:hover {
+    background-color: #0f3bbb;
 }
 
 input.button:hover {
-    background-color: #cccccc
+    background-color: #cccccc;
 }
 
 @media only screen and (max-width:620px) {
