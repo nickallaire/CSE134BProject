@@ -52,6 +52,7 @@
     <Content Include="contact.html" />
     <Content Include="travelinfo.html" />
     <Content Include="personalinfo.html" />
+    <Content Include="login.html" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
