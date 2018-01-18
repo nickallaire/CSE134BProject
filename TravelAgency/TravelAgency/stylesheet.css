@@ -137,9 +137,27 @@ div.login button:hover {
 }
 
 div.chatbox {
-    position: absolute;
+    position: fixed;
     left: 0px;
+    bottom: 0px;
+    z-index: 10;
+}
+
+div.chatbox:hover div.chatbox-content {
+    display: block;
+    bottom: 10px;
+    left: 10px;
+}
+
+div.chatbox:hover div.chatbox {
     bottom: 50px;
+}
+
+div.chatbox-content {
+    display: none;
+    position:absolute;
+    z-index: 10;
+    background-color: #dddddd;
 }
 
 div.chatbox button {
@@ -147,7 +165,81 @@ div.chatbox button {
     padding: 10px;
     color: #ffffff;
     background-color: #dddddd;
-    width: 150px;
+    width: 200px;
+}
+
+div.flights {
+    padding-bottom: 50px;
+    margin-top: -80px;
+}
+
+div.flight {
+    width: 80%;
+    height: 100px;
+    margin-left:10%;
+    margin-right: 10%;
+    margin-bottom: 1%;
+    margin-top: 1%;
+    position: relative;
+    border: solid;
+}
+
+div.flight:hover {
+    background-color: #dddddd;
+}
+
+div.flight h1.airline {
+    position: absolute;
+    left: 3.5%;
+    margin-top: 5px;
+}
+
+div.flight h3.path {
+    position: absolute;
+    margin-left: 3.5%;
+    margin-top: 25px;
+
+}
+
+div.flight h4.depart {
+    position: absolute;
+    left: 18%;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+div.flight h4.return {
+    position: absolute;
+    left: 18%;
+    margin-top: 30px;
+}
+
+div.flight h3.price {
+    position: absolute;
+    right: 10%;
+}
+
+input[type="radio"] {
+    display: inline-block;
+    position: absolute;
+    top: 40%;
+    left: 0.5%;
+}
+
+div.flights [type="submit"] {
+    position: relative;
+    left: 90%;
+    transform: translate(-93%, 0%);
+    margin-bottom: 1%;
+    width: 7%;
+    height: 25px;
+    border: none;
+    background-color: #ff8b00
+
+}
+
+div.flights [type="submit"]:hover {
+    background-color: #ff8b90
 }
 
 @media only screen and (max-width:620px) {
