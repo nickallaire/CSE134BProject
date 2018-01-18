@@ -1,16 +1,17 @@
 ﻿<Properties StartupConfiguration="{5410DB11-C30D-45D8-BD59-D0F4C74C2F46}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="TravelAgency/index.html">
+  <MonoDevelop.Ide.Workbench ActiveDocument="TravelAgency/flightdata.html">
     <Files>
-      <File FileName="TravelAgency/stylesheet.css" Line="59" Column="23" />
-      <File FileName="TravelAgency/index.html" Line="35" Column="4" />
+      <File FileName="TravelAgency/stylesheet.css" Line="72" Column="19" />
+      <File FileName="TravelAgency/index.html" Line="36" Column="4" />
       <File FileName="TravelAgency/about.html" Line="23" Column="13" />
       <File FileName="TravelAgency/bookflights.html" Line="25" Column="9" />
       <File FileName="TravelAgency/bookhotels.html" Line="26" Column="1" />
       <File FileName="TravelAgency/signup.html" Line="25" Column="9" />
       <File FileName="TravelAgency/contact.html" Line="30" Column="1" />
-      <File FileName="TravelAgency/travelinfo.html" Line="35" Column="13" />
+      <File FileName="TravelAgency/travelinfo.html" Line="25" Column="59" />
       <File FileName="TravelAgency/personalinfo.html" Line="14" Column="15" />
-      <File FileName="TravelAgency/login.html" Line="24" Column="27" />
+      <File FileName="TravelAgency/login.html" Line="38" Column="11" />
+      <File FileName="TravelAgency/flightdata.html" Line="30" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

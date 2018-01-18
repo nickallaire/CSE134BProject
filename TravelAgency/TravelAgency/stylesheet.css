@@ -66,10 +66,10 @@ div.reviews {
 }
 
 div.review {
+    text-align: center;
     float: left;
     width: 33.33%;
-    text-align: center;
-    color: #ffabde;
+    color: #000000;
 }
 
 div.info {
@@ -136,9 +136,27 @@ div.login button:hover {
     background-color:#f0c777;
 }
 
+div.chatbox {
+    position: absolute;
+    left: 0px;
+    bottom: 50px;
+}
+
+div.chatbox button {
+    border: none;
+    padding: 10px;
+    color: #ffffff;
+    background-color: #dddddd;
+    width: 150px;
+}
+
 @media only screen and (max-width:620px) {
     /* For mobile phones */
     li {
+        width: 100%;
+    }
+
+    div.review {
         width: 100%;
     }
 }
