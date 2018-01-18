@@ -164,8 +164,9 @@ div.chatbox button {
     border: none;
     padding: 10px;
     color: #ffffff;
-    background-color: #dddddd;
+    background-color: #cccccc;
     width: 200px;
+    height: 40px;
 }
 
 div.flights {
@@ -223,7 +224,7 @@ input[type="radio"] {
     display: inline-block;
     position: absolute;
     top: 40%;
-    left: 0.5%;
+    left: 0.75%;
 }
 
 div.flights [type="submit"] {
