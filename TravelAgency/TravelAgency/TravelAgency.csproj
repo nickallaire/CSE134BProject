@@ -54,6 +54,7 @@
     <Content Include="personalinfo.html" />
     <Content Include="login.html" />
     <Content Include="flightdata.html" />
+    <Content Include="checkout.html" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
