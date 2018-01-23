@@ -55,6 +55,10 @@
     <Content Include="login.html" />
     <Content Include="flightdata.html" />
     <Content Include="checkout.html" />
+    <Content Include="attractions.html" />
+    <Content Include="hotels.html" />
+    <Content Include="verify.html" />
+    <Content Include="success.html" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
