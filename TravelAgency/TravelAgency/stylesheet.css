@@ -140,15 +140,16 @@ div.chatbox {
     position: fixed;
     left: 0px;
     bottom: 0px;
-    height: 200px;
+    height: 250px;
     z-index: 10;
 }
 
 div.chatbox-messages {
     position: absolute;
     z-index: 10;
-    width: 200px;
-    height: 160px;
+    width: 250px;
+    height: 210px;
+    bottom: 25px;
     background-color: #cccccc;
 }
 
@@ -156,19 +157,25 @@ div.chatbox-content {
     position:absolute;
     z-index: 10;
     height: 20px;
-    width: 190px;
-    padding-left: 10px;
+    width: 245px;
+    padding-left: 5px;
+    padding-bottom: 5px;
     bottom: 0;
-    background-color: #dddddd;
+    background-color: #cccccc;
 }
 
 div.chatbox-button button{
+    position: absolute;
     border: none;
-    padding: 10px;
     color: #ffffff;
+    bottom: 235px;
     background-color: #444444;
-    width: 200px;
-    height: 25px;
+    width: 250px;
+    height: 35px;
+}
+
+div.chatbox-content [type="text"] {
+    width: 190px;
 }
 
 div.flights {
@@ -234,7 +241,7 @@ div.flights [type="submit"] {
     left: 90%;
     transform: translate(-93%, 0%);
     margin-bottom: 1%;
-    width: 7%;
+    width: 90px;
     height: 25px;
     border: none;
     background-color: #ff8b00
