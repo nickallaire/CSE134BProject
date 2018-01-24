@@ -164,11 +164,13 @@ div.chatbox-content {
     background-color: #cccccc;
 }
 
-div.chatbox-button button{
+div.chatbox-button button {
     position: absolute;
+    outline: none;
     border: none;
     color: #ffffff;
     bottom: 235px;
+    z-index: 10;
     background-color: #444444;
     width: 250px;
     height: 35px;

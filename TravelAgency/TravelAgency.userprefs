@@ -1,7 +1,7 @@
 ﻿<Properties StartupConfiguration="{5410DB11-C30D-45D8-BD59-D0F4C74C2F46}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="TravelAgency/flightdata.html">
+  <MonoDevelop.Ide.Workbench ActiveDocument="TravelAgency/stylesheet.css">
     <Files>
-      <File FileName="TravelAgency/stylesheet.css" Line="159" Column="13" />
+      <File FileName="TravelAgency/stylesheet.css" Line="170" Column="19" />
       <File FileName="TravelAgency/index.html" Line="31" Column="34" />
       <File FileName="TravelAgency/about.html" Line="23" Column="13" />
       <File FileName="TravelAgency/bookflights.html" Line="25" Column="9" />
@@ -11,7 +11,7 @@
       <File FileName="TravelAgency/travelinfo.html" Line="25" Column="59" />
       <File FileName="TravelAgency/personalinfo.html" Line="14" Column="15" />
       <File FileName="TravelAgency/login.html" Line="6" Column="44" />
-      <File FileName="TravelAgency/flightdata.html" Line="69" Column="13" />
+      <File FileName="TravelAgency/flightdata.html" Line="91" Column="48" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
