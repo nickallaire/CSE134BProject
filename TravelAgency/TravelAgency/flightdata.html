@@ -59,8 +59,8 @@
         </div>
 
         <div class="chatbox" id="chat">
-            <div class="chatbox-button" id="chat-button">
-                <button onclick="alterChatbox()">Chatting with an agent</button>              
+            <div class="chatbox-button">
+                <button onclick="alterChatbox()" id="chat-button">Chatting with an agent</button>              
             </div>
 
             <div class="chatbox-messages" id="chat-message">
@@ -88,11 +88,11 @@
         if (chatMessage.style.display === "none") {
             chatMessage.style.display = "block";
             chatContent.style.display = "block";
-            chat.style.height = 250+"px";
+            chatButton.style.bottom = "240px";
         } else {
             chatMessage.style.display = "none";
             chatContent.style.display = "none";
-            chat.style.height = 35+"px";
+            chatButton.style.bottom = "0px";
         }
     }
     </script>

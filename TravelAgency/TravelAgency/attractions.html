@@ -22,13 +22,85 @@
         </div>
         <div class="info">
             <h1>Attractions</h1>
-            <form name="attractions" action="hotels.html" method="get">
-                <input type="submit" value="Next" class="button" />
-            </form>
+
+            <div class="attractions">
+                <form name="attractions" action="hotels.html" method="get">
+                    <div class="attraction">
+                        <input type="checkbox" name="attraction1" />
+                        <h2>Hot Air Balloon over Italy</h2>
+                        <h3>Wednesday Jan 10th @ 7:00am</h3>
+                    </div>
+                    <div class=attraction>
+                        <input type="checkbox" name="attraction2" />
+                        <h2>Art Musuem</h2>
+                        <h3>Tuesday Feb 9th @ 5:30pm</h3>
+                    </div>
+                    <div class="attraction">
+                        <input type="checkbox" name="attraction3" />
+                        <h2>Deep Sea Fishing</h2>
+                        <h3>Friday Mar 30th @ 4:00am</h3>
+                    </div>
+                    <div class="attraction">
+                        <input type="checkbox" name="attraction4" />
+                        <h2>Bus Tour of London</h2>
+                        <h3>Saturday Aug 3rd @ 12:00pm</h3>
+                    </div>
+                    <div class="attraction">
+                        <input type="checkbox" name="attraction5" />
+                        <h2>Dinner in Eiffel Tower</h2>
+                        <h3>Sunday Jul 15th @ 6:15pm</h3>
+                    </div>
+                    <div class="attraction">
+                        <input type="checkbox" name="attraction6" />
+                        <h2>Whale Watching</h2>
+                        <h3>Thursday Apr 1st @ 6:00pm</h3>
+                    </div>
+
+                    <br />
+                    <input type="submit" value="Next" class="button" />
+                </form>
+            </div>
+
         </div>
+
+        <div class="chatbox" id="chat">
+            <div class="chatbox-button">
+                <button onclick="alterChatbox()" id="chat-button">Chatting with an agent</button>
+            </div>
+
+            <div class="chatbox-messages" id="chat-message">
+
+            </div>
+
+            <div class="chatbox-content" id="chat-content">
+                <input type="text" name="message" />
+                <input type="submit" value="Send" />
+            </div>
+        </div>
+
         <div class="footer">
             <h1>Copyright &copy; TravelAgency.com</h1>
         </div>
     </div>
+
+    <script>
+    function alterChatbox() {
+        var chat = document.getElementById('chat');
+        var chatMessage = document.getElementById('chat-message');
+        var chatContent = document.getElementById('chat-content');
+        var chatButton = document.getElementById('chat-button');
+
+        if (chatMessage.style.display === "none") {
+            chatMessage.style.display = "block";
+            chatContent.style.display = "block";
+            chatButton.style.bottom = "240px";
+        } else {
+            chatMessage.style.display = "none";
+            chatContent.style.display = "none";
+            chatButton.style.bottom = "0px";
+        }
+    }
+    </script>
+
 </body>
 </html>
