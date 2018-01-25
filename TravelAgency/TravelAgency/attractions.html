@@ -20,47 +20,47 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
-        <div class="info">
-            <h1>Attractions</h1>
-
-            <div class="attractions">
-                <form name="attractions" action="hotels.html" method="get">
-                    <div class="attraction">
-                        <input type="checkbox" name="attraction1" />
-                        <h2>Hot Air Balloon over Italy</h2>
-                        <h3>Wednesday Jan 10th @ 7:00am</h3>
-                    </div>
-                    <div class=attraction>
-                        <input type="checkbox" name="attraction2" />
-                        <h2>Art Musuem</h2>
-                        <h3>Tuesday Feb 9th @ 5:30pm</h3>
-                    </div>
-                    <div class="attraction">
-                        <input type="checkbox" name="attraction3" />
-                        <h2>Deep Sea Fishing</h2>
-                        <h3>Friday Mar 30th @ 4:00am</h3>
-                    </div>
-                    <div class="attraction">
-                        <input type="checkbox" name="attraction4" />
-                        <h2>Bus Tour of London</h2>
-                        <h3>Saturday Aug 3rd @ 12:00pm</h3>
-                    </div>
-                    <div class="attraction">
-                        <input type="checkbox" name="attraction5" />
-                        <h2>Dinner in Eiffel Tower</h2>
-                        <h3>Sunday Jul 15th @ 6:15pm</h3>
-                    </div>
-                    <div class="attraction">
-                        <input type="checkbox" name="attraction6" />
-                        <h2>Whale Watching</h2>
-                        <h3>Thursday Apr 1st @ 6:00pm</h3>
-                    </div>
-
-                    <br />
-                    <input type="submit" value="Next" class="button" />
-                </form>
-            </div>
-
+        <h1>Attractions</h1>
+        <div class="table">
+            <form name="attractions" action="hotels.html" method="get">
+                <table class="attraction-table">
+                    <tr class="attraction-row">
+                        <td class="attraction-cell">
+                            <input type="checkbox" name="attraction1" />
+                            <h2>Hot Air Balloon over Italy</h2>
+                            <h3>Wednesday Jan 10th @ 7:00am</h3>
+                        </td>
+                        <td class="attraction-cell">
+                            <input type="checkbox" name="attraction2" />
+                            <h2>Art Musuem</h2>
+                            <h3>Tuesday Feb 9th @ 5:30pm</h3>
+                        </td>
+                        <td class="attraction-cell">
+                            <input type="checkbox" name="attraction3" />
+                            <h2>Deep Sea Fishing</h2>
+                            <h3>Friday Mar 30th @ 4:00am</h3>
+                        </td>
+                    </tr>
+                    <tr class="attraction-row">
+                        <td class="attraction-cell">
+                            <input type="checkbox" name="attraction4" />
+                            <h2>Bus Tour of London</h2>
+                            <h3>Saturday Aug 3rd @ 12:00pm</h3>
+                        </td>
+                        <td class="attraction-cell">
+                            <input type="checkbox" name="attraction5" />
+                            <h2>Dinner in Eiffel Tower</h2>
+                            <h3>Sunday Jul 15th @ 6:15pm</h3>
+                        </td>
+                        <td class="attraction-cell">
+                            <input type="checkbox" name="attraction6" />
+                            <h2>Whale Watching</h2>
+                            <h3>Thursday Apr 1st @ 6:00pm</h3>
+                        </td>
+                    </tr>
+                </table>
+                <input type="submit" value="Next" />
+            </form>
         </div>
 
         <div class="chatbox" id="chat">
