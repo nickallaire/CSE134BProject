@@ -358,3 +358,55 @@ div.travel-breakdown h3 {
         border-spacing: 0px;
     }
 }
+
+
+.hotel-table {
+    width: 100%;
+    border-spacing: 30px;
+    table-layout: fixed;        
+}
+
+.hotel-cell {
+    border: 3px solid black;
+    width: 33%;
+}
+
+.hotel-cell:hover {
+    background-color:#dddddd;
+}
+
+.hotel-cell h2, h3 {
+    text-align: center;
+}
+
+.hotel-cell [type="checkbox"] {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin-top: 20px;
+    margin-bottom: -50px;
+}
+
+@media only screen and (max-width:620px) {
+    /* For mobile phones */
+    li {
+        width: 100%;
+    }
+
+    div.review {
+        width: 100%;
+    }
+
+    .hotel-cell {
+        display: inline-block;
+        float: left;
+        width: 90%;
+        margin-bottom: 30px;
+        margin-left: 4%;
+        margin-right: 6%;
+    }
+
+    .hotel-table {
+        border-spacing: 0px;
+    }
+}
