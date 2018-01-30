@@ -195,6 +195,29 @@ div.flight {
     margin-top: 1%;
     position: relative;
     border: solid;
+    display: inline-flex;
+}
+
+div.flight-first {
+    padding-left: : 25px;
+    order: 1;
+    width: 5%;
+}
+
+div.flight-left {
+    padding-left: : 25px;
+    order: 1;
+    width: 33%;
+}
+
+div.flight-mid {
+    order: 2;
+    width: 50%;
+}
+
+div.flight-right {
+    order: 3;
+    width: 10%;
 }
 
 div.flight:hover {
@@ -202,33 +225,32 @@ div.flight:hover {
 }
 
 div.flight h1.airline {
-    position: absolute;
+    /*position: absolute;*/
     left: 3.5%;
     margin-top: 5px;
 }
 
 div.flight h3.path {
-    position: absolute;
-    margin-left: 3.5%;
-    margin-top: 25px;
+    /*position: absolute;*/
+    text-align: left;
 
 }
 
 div.flight h4.depart {
-    position: absolute;
+    /*position: absolute;*/
     left: 18%;
-    margin-top: 25px;
+    /*margin-top: 25px;*/
     margin-bottom: 10px;
 }
 
 div.flight h4.return {
-    position: absolute;
+    /*position: absolute;*/
     left: 18%;
-    margin-top: 30px;
+    /*margin-top: 30px;*/
 }
 
 div.flight h3.price {
-    position: absolute;
+    /*position: absolute;*/
     right: 10%;
 }
 
