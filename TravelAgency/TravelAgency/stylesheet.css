@@ -410,3 +410,33 @@ div.travel-breakdown h3 {
         border-spacing: 0px;
     }
 }
+
+.calendar-day-container {
+    border: 3px solid black;
+    display: inline-flex;
+    width: 95%;
+}
+
+.date-loc {
+    order: 1;
+    width: 17%;
+    position: relative;
+    left: 2%;
+    text-align: left;
+}
+
+.activities {
+    order: 2;
+    width: 60%;
+    margin-top: 30px;
+}
+
+.image {
+    order: 3;
+    width: 30%;
+}
+
+.image > img {
+    height: 200px;
+    width: 200px;
+}
