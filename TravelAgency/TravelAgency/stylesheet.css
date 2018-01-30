@@ -409,12 +409,31 @@ div.travel-breakdown h3 {
     .hotel-table {
         border-spacing: 0px;
     }
+
+    .calendar-day-container {
+        flex-wrap: wrap;
+    }
+
+    .activities {
+        width: 70%;
+        margin-left: 25px;
+    }
+    .date-loc {
+        width: 30%;
+    }
+
+    .image {
+        clear: both;
+        flex-shrink: .5;
+        margin-left: 25%
+    }
 }
 
 .calendar-day-container {
     border: 3px solid black;
     display: inline-flex;
     width: 95%;
+    position: relative;
 }
 
 .date-loc {
@@ -425,10 +444,18 @@ div.travel-breakdown h3 {
     text-align: left;
 }
 
-.activities {
+.times {
     order: 2;
-    width: 60%;
+    width: 10%;
     margin-top: 30px;
+    margin-left: 15px;
+}
+
+.descriptions {
+    order: 3;
+    width: 40%;
+    margin-top: 30px;
+    margin-left: 15px;
 }
 
 .image {
