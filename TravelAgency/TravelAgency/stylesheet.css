@@ -72,6 +72,12 @@ div.review {
     color: #000000;
 }
 
+div.checkout-container {
+    position: relative;
+    left: 30%;
+    padding-bottom: 75px;
+}
+
 div.info {
     margin-left: 20px;
     padding-bottom: 75px;
@@ -526,4 +532,9 @@ div.travel-breakdown h3 {
     display: inline-block;
     text-align: center;
     width: 100%; 
+}
+
+.centered-button {
+    position: relative;
+    left: 50%;
 }
