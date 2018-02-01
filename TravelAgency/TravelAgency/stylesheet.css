@@ -467,3 +467,49 @@ div.travel-breakdown h3 {
     height: 200px;
     width: 200px;
 }
+
+.rectangle-empty {
+    width: 7%;
+    height: 5px;
+    background: white;
+    border-width: 2px;
+    border-color: blue;
+    border-style: solid;
+    display: inline-block;
+}
+.rectangle-filled {
+    width: 7%;
+    height: 7.5px;
+    background: blue;
+    display: inline-block;
+}
+
+.circle-empty {
+    width: 14px;
+    height: 14px;
+    background: white;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    border-style: solid;
+    border-color: blue;
+    border-width: 2px; 
+    display: inline-block;
+    position: relative;
+    top: 4px;
+}
+.circle-filled {
+    width: 15px;
+    height: 15px;
+    background: blue;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    display: inline-block;
+    position: relative;
+    top: 4px;
+}
+
+.statusbar-container {
+    text-align: center;
+    width: 100%; 
+}
