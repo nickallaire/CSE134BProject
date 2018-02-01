@@ -513,3 +513,17 @@ div.travel-breakdown h3 {
     text-align: center;
     width: 100%; 
 }
+
+.statusbar-label {
+    display: inline-block;
+    width: 8.5%;
+    position: relative;
+    left: 3%;
+    margin-left: 2px;
+}
+
+.statusbar-label-container {
+    display: inline-block;
+    text-align: center;
+    width: 100%; 
+}
