@@ -38,6 +38,11 @@ div.header {
     margin-bottom: 0px;
 }
 
+.header-img {
+    width: 100%;
+    height: 250px;
+}
+
 div.title {
     position: absolute;
     left: 50%;
@@ -74,8 +79,9 @@ div.review {
 
 div.checkout-container {
     position: relative;
-    left: 30%;
+    left: 24%;
     padding-bottom: 75px;
+    width: 275px;
 }
 
 div.info {
@@ -194,9 +200,9 @@ div.flights {
 
 div.flight {
     width: 80%;
-    height: 100px;
-    margin-left:10%;
-    margin-right: 10%;
+    height: 150px;
+    margin-left:8%;
+    margin-right: 12%;
     margin-bottom: 1%;
     margin-top: 1%;
     position: relative;
@@ -205,24 +211,29 @@ div.flight {
 }
 
 div.flight-first {
-    padding-left: : 25px;
+    padding-left: 25px;
     order: 1;
     width: 5%;
 }
 
 div.flight-left {
-    padding-left: : 25px;
+    padding-top: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
     order: 1;
     width: 33%;
 }
 
 div.flight-mid {
     order: 2;
+    padding-top: 25px;
+    padding-left: 25px;
     width: 50%;
 }
 
 div.flight-right {
     order: 3;
+    padding-right: 25px;
     width: 10%;
 }
 
@@ -230,34 +241,10 @@ div.flight:hover {
     background-color: #dddddd;
 }
 
-div.flight h1.airline {
-    /*position: absolute;*/
-    left: 3.5%;
-    margin-top: 5px;
-}
-
 div.flight h3.path {
     /*position: absolute;*/
     text-align: left;
 
-}
-
-div.flight h4.depart {
-    /*position: absolute;*/
-    left: 18%;
-    /*margin-top: 25px;*/
-    margin-bottom: 10px;
-}
-
-div.flight h4.return {
-    /*position: absolute;*/
-    left: 18%;
-    /*margin-top: 30px;*/
-}
-
-div.flight h3.price {
-    /*position: absolute;*/
-    right: 10%;
 }
 
 input[type="radio"] {
@@ -341,31 +328,6 @@ div.travel-breakdown h3 {
     margin-bottom: -50px;
 }
 
-@media only screen and (max-width:620px) {
-    /* For mobile phones */
-    li {
-        width: 100%;
-    }
-
-    div.review {
-        width: 100%;
-    }
-
-    .attraction-cell {
-        display: inline-block;
-        float: left;
-        width: 90%;
-        margin-bottom: 30px;
-        margin-left: 4%;
-        margin-right: 6%;
-    }
-
-    .attraction-table {
-        border-spacing: 0px;
-    }
-}
-
-
 .hotel-table {
     width: 100%;
     border-spacing: 30px;
@@ -393,53 +355,15 @@ div.travel-breakdown h3 {
     margin-bottom: -50px;
 }
 
-@media only screen and (max-width:620px) {
-    /* For mobile phones */
-    li {
-        width: 100%;
-    }
-
-    div.review {
-        width: 100%;
-    }
-
-    .hotel-cell {
-        display: inline-block;
-        float: left;
-        width: 90%;
-        margin-bottom: 30px;
-        margin-left: 4%;
-        margin-right: 6%;
-    }
-
-    .hotel-table {
-        border-spacing: 0px;
-    }
-
-    .calendar-day-container {
-        flex-wrap: wrap;
-    }
-
-    .activities {
-        width: 70%;
-        margin-left: 25px;
-    }
-    .date-loc {
-        width: 30%;
-    }
-
-    .image {
-        clear: both;
-        flex-shrink: .5;
-        margin-left: 25%
-    }
-}
-
 .calendar-day-container {
     border: 3px solid black;
     display: inline-flex;
-    width: 95%;
+    width: 90%;
+    margin-left: 3%;
+    margin-right: 7%;
     position: relative;
+    margin-bottom: 25px;
+
 }
 
 .date-loc {
@@ -467,11 +391,15 @@ div.travel-breakdown h3 {
 .image {
     order: 3;
     width: 30%;
+    right: 0;
+    padding-top: 30px;
+    padding-right: 10px;
+    padding-left: 10px;
 }
 
 .image > img {
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
 }
 
 .rectangle-empty {
@@ -517,24 +445,137 @@ div.travel-breakdown h3 {
 
 .statusbar-container {
     text-align: center;
-    width: 100%; 
+    width: 100%;
 }
 
 .statusbar-label {
     display: inline-block;
-    width: 8.5%;
     position: relative;
-    left: 3%;
-    margin-left: 2px;
+    text-align: center;
+    width: 8.5%;
+    padding-right: 2.5%;
 }
 
 .statusbar-label-container {
     display: inline-block;
-    text-align: center;
-    width: 100%; 
+    width: 76%;
+    margin-left: 24%;
 }
 
 .centered-button {
     position: relative;
     left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+@media only screen and (max-width:620px) {
+    /* For mobile phones */
+    li {
+        width: 100%
+    }
+
+    div.review {
+        width: 100%
+    }
+
+    .attraction-cell {
+        display: inline-block;
+        float: left;
+        width: 90%;
+        margin-bottom: 30px;
+        margin-left: 4%;
+        margin-right: 6%
+    }
+
+    .attraction-table {
+        border-spacing: 0px
+    }
+
+    .hotel-cell {
+        display: inline-block;
+        float: left;
+        width: 90%;
+        margin-bottom: 30px;
+        margin-left: 4%;
+        margin-right: 6%
+    }
+
+    .hotel-table {
+        border-spacing: 0px
+    }
+
+    .calendar-day-container {
+        flex-wrap: wrap
+    }
+
+    .activities {
+        width: 70%;
+        margin-left: 25px
+    }
+
+    .date-loc {
+        width: 30%
+
+    }
+
+    .image {
+        width: 200px;
+        padding-left: 20px;
+        padding-bottom: 20px;
+        margin-left: 25%;
+    }
+
+    .image > img {
+        height: 200px;
+        width: 200px;
+
+    }
+
+    div.flight {
+        height: 225px;
+    }
+
+    div.flight-first {
+        order: 0;
+        position: absolute;
+        left: 20px;
+        top: 100px;
+
+    }
+
+    div.flight-left {
+        order: 1;
+        position: absolute;
+        left: 50px;
+        padding-right: 0%;
+        margin-right: 0px;
+        width: 200px;
+    }
+
+    div.flight-mid {
+        order: 1;
+        position: absolute;
+        left: 50px;
+        top: 115px;
+        padding-right: 0px;
+        padding-top: 10px;
+        width: 250px;
+    }
+
+    div.flight-right {
+        order: 3;
+        position: absolute;
+        right: 0px;
+        padding-left: 0px;
+    }
+
+    .statusbar-label {
+        transform: rotate(-45deg);
+        padding-left: 0.25%;
+        padding-right: 4%;
+    }
+
+    .statusbar-label-container {
+        margin-left: 16%;
+    }
 }
