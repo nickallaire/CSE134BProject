@@ -13,6 +13,18 @@ ul {
     text-align: center;
 }
 
+.list {
+    clear: both;
+}
+
+ul::after {
+    clear: both;
+}
+
+input[type="radio"] {
+    display: block;
+}
+
 li {
     float: left;
     width: 20%;
@@ -68,6 +80,15 @@ div.footer h1 {
 
 div.reviews {
     padding-bottom: 100px;
+}
+
+div.reviews::after {
+    clear: both;
+}
+
+
+.clear {
+    clear: both;
 }
 
 div.review {
@@ -248,7 +269,6 @@ div.flight h3.path {
 }
 
 input[type="radio"] {
-    display: inline-block;
     position: absolute;
     top: 40%;
     left: 0.75%;
