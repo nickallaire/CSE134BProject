@@ -17,7 +17,6 @@ function startup() {
 function populateChatBox() {
     messages = JSON.parse(window.sessionStorage.getItem("messages"))
     if(messages == null) return;
-    console.log(messages)
     for (let i = 0; i < messages.length; i++) {
         addEntry(messages[i])
     }
