@@ -8,53 +8,100 @@
 <body>
     <div class="container">
         <div class="header">
-            <img src="https://images.fineartamerica.com/images-medium-large-5/7-background-travel-concept-potowizard-thailand.jpg" alt="Logo" width="100%" height="250px" />
+            <img class="header-img" src="https://images.fineartamerica.com/images-medium-large-5/7-background-travel-concept-potowizard-thailand.jpg" alt="Logo" />
             <div class="title">Travel Agency</div>
         </div>
         <div class="list">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="bookflights.html">Flights</a></li>
-                <li><a href="bookhotels.html">Hotels</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
+        <div class="status-container">
+            <div class="statusbar-label-container">
+                <p class="statusbar-label">Personal Info</p>
+                <p class="statusbar-label">Travel Info</p>
+                <p class="statusbar-label">Flight Results</p>
+                <p class="statusbar-label">Attractions</p>
+                <p class="statusbar-label">Hotels</p>
+                <p class="statusbar-label">Verify</p>
+                <p class="statusbar-label">Check Out</p>
+            </div>
 
+            <div class="statusbar-container">
+                <div class="rectangle-filled"></div>            
+                <div class="circle-filled"></div>
+                <div class="rectangle-filled"></div>            
+                <div class="circle-filled"></div>
+                <div class="rectangle-filled"></div>            
+                <div class="circle-empty"></div>
+                <div class="rectangle-empty"></div>            
+                <div class="circle-empty"></div>
+                <div class="rectangle-empty"></div>            
+                <div class="circle-empty"></div>
+                <div class="rectangle-empty"></div>            
+                <div class="circle-empty"></div>
+                <div class="rectangle-empty"></div>            
+                <div class="circle-empty"></div>
+            </div>
+        </div>
         <div class="info">
             <h1>Flight Results</h1>
         </div>
 
-        <div class="flights">
+        <div class="flight-data-container info">
             <form action="attractions.html">
                 <div class="flight">
-                    <input type="radio" name="flight" value="delta-123" />
-                    <h1 class="airline">Delta</h1><br />
-                    <h3 class="path">LAX &rarr; PAR</h3>
-                    <h4 class="depart">Departs: 3:30pm Dec 21st</h4>
-                    <h3 class="price">$331</h3><br />
-                    <h4 class="return">Arrives: 10:30pm Jan 3rd</h4>
+                    <div class="flight-first">
+                        <input type="radio" name="flight" value="delta-123" />
+                    </div>
+                    <div class="flight-left">
+                        <h1 class="airline">Delta</h1>
+                        <h3 class="path">LAX &rarr; PAR</h3>
+                    </div>
+                    <div class="flight-mid">
+                        <h4 class="depart">Departs: 3:30pm Dec 21st</h4>
+                        <h4 class="return">Arrives: 10:30pm Jan 3rd</h4>
+                    </div>
+                    <div class="flight-right">
+                        <h3 class="price">$331</h3><br />
+                    </div>
                 </div>
 
                 <div class="flight">
-                    <input type="radio" name="flight" value="southwest-456" />
-                    <h1 class="airline">Southwest</h1><br />
-                    <h3 class="path">LON &rarr; AUS</h3>
-                    <h4 class="depart">Departs: 8:00am Feb 8th</h4>
-                    <h3 class="price">$225</h3><br />
-                    <h4 class="return">Arrives: 6:25pm Feb 9th</h4>
+                    <div class="flight-first">
+                        <input type="radio" name="flight" value="southwest-456" />
+                    </div>
+                    <div class="flight-left">
+                        <h1 class="airline">Southwest</h1>
+                        <h3 class="path">LON &rarr; AUS</h3>
+                    </div>
+                    <div class="flight-mid">
+                        <h4 class="depart">Departs: 8:00am Feb 8th</h4>
+                        <h4 class="return">Arrives: 6:25pm Feb 9th</h4>
+                    </div>
+                    <div class="flight-right">
+                        <h3 class="price">$225</h3>
+                    </div>
                 </div>
 
                 <div class="flight">
-                    <input type="radio" name="flight" value="frontier-789" />
-                    <h1 class="airline">Frontier</h1><br />
-                    <h3 class="path">TOK &rarr; FRA</h3>
-                    <h4 class="depart">Departs: 4:00pm Aug 31st</h4>
-                    <h3 class="price">$150</h3><br />
-                    <h4 class="return">Arrives: 1:45am Sep 1st</h4>
+                    <div class="flight-first">
+                        <input type="radio" name="flight" value="frontier-789" />
+                    </div>
+                    <div class="flight-left">
+                        <h1 class="airline">Frontier</h1>
+                        <h3 class="path">TOK &rarr; FRA</h3>
+                    </div>
+                    <div class="flight-mid">
+                        <h4 class="depart">Departs: 4:00pm Aug 31st</h4>
+                        <h4 class="return">Arrives: 1:45am Sep 1st</h4>
+                    </div>
+                    <div class="flight-right">
+                        <h3 class="price">$150</h3>
+                    </div>
                 </div>
 
-                <input type="submit" value="Choose Flight" />
+                <input type="submit" value="Choose Flight" class="button centered-button" />
             </form>
         </div>
 
@@ -64,12 +111,14 @@
             </div>
 
             <div class="chatbox-messages" id="chat-message">
+                <ul id="messages-list">    
 
+                </ul>
             </div>
 
             <div class="chatbox-content" id="chat-content">
-                <input type="text" name="message" />
-                <input type="submit" value="Send" />
+                <input type="text" id="message" />
+                <button onclick="sendMessage()" id="submit-message-button">Submit</button> 
             </div>
         </div>
 
@@ -77,24 +126,6 @@
             <h1>Copyright &copy; TravelAgency.com</h1>
         </div>
     </div>
-
-    <script>
-    function alterChatbox() {
-        var chat = document.getElementById('chat');
-        var chatMessage = document.getElementById('chat-message');
-        var chatContent = document.getElementById('chat-content');
-        var chatButton = document.getElementById('chat-button');
-
-        if (chatMessage.style.display === "none") {
-            chatMessage.style.display = "block";
-            chatContent.style.display = "block";
-            chatButton.style.bottom = "240px";
-        } else {
-            chatMessage.style.display = "none";
-            chatContent.style.display = "none";
-            chatButton.style.bottom = "0px";
-        }
-    }
-    </script>
+    <script src="chatbox.js"></script> 
 </body>
 </html>

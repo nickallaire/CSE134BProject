@@ -8,7 +8,7 @@
 <body>
     <div class="container">
         <div class="header">
-            <img src="https://images.fineartamerica.com/images-medium-large-5/7-background-travel-concept-potowizard-thailand.jpg" alt="Logo" width="100%" height="250px" />
+            <img class="header-img" src="https://images.fineartamerica.com/images-medium-large-5/7-background-travel-concept-potowizard-thailand.jpg" alt="Logo" />
             <div class="title">Travel Agency</div>
         </div>
         <ul>
@@ -21,6 +21,52 @@
 
         <div class="info">
             <h1>Book your hotels with us now!</h1>
+            <form name="bookhotels" action="verify.html" method="get">
+                <table class="hotel-table">
+                    <tr class="hotel-row">
+                        <td class="hotel-cell">
+                            <input type="checkbox" name="hotel1" />
+                            <h2>Hyatt</h2>
+                            <h3>711 Waverly Place, London</h3>
+                            <h2>$69</h2>
+                        </td>
+                        <td class="hotel-cell">
+                            <input type="checkbox" name="hotel2" />
+                            <h2>Marriott</h2>
+                            <h3>1234 Mason Ave, London</h3>
+                            <h2>$72</h2>
+                        </td>
+                        <td class="hotel-cell">
+                            <input type="checkbox" name="hotel3" />
+                            <h2>W Hotel</h2>
+                            <h3>6543 South 11th Street, London</h3>
+                            <h2>$87</h2>
+                        </td>
+                    </tr>
+                    <tr class="hotel-row">
+                        <td class="hotel-cell">
+                            <input type="checkbox" name="hotel1" />
+                            <h2>Rits Carlton</h2>
+                            <h3>34564 5th Street, London</h3>
+                            <h2>$101</h2>
+                        </td>
+                        <td class="hotel-cell">
+                            <input type="checkbox" name="hotel2" />
+                            <h2>Super 8</h2>
+                            <h3>999 Nowhere, London</h3>
+                            <h2>$63</h2>
+                        </td>
+                        <td class="hotel-cell">
+                            <input type="checkbox" name="hotel3" />
+                            <h2>Hilton</h2>
+                            <h3>9234 Have Ave, London</h3>
+                            <h2>$87</h2>
+                        </td>
+                    </tr>
+                </table>
+
+                <input type="submit" value="Choose" class="button centered-button" />
+            </form>
         </div>
 
         <div class="footer">
