@@ -468,6 +468,21 @@ div.travel-breakdown h3 {
     transform: translate(-50%, 0%);
 }
 
+div.flight-container {
+     margin-left: 20px;
+}
+
+div.flight-data {
+    position: relative;
+    left: 50px;
+}
+
+div.user-flights {
+    position: absolute;
+    top: 300px;
+    right: 50px;
+}
+
 @media only screen and (max-width:620px) {
     /* For mobile phones */
     li {

@@ -48,34 +48,48 @@
             <div class="travel-info-container info">
                 <h1>Travel Information</h1>
 
-                <form name="travelinfo" action="flightdata.html" method="get">
-                    Enter travel destination:
-                    <input type="text" name="destination" /><br /><br />
-                    Select a departure date:
-                    <input type="date" name="start-date" min="2018-01-11" /><br /><br />
-                    Select a return date:
-                    <input type="date" name="end-date" min="2018-01-12" /><br /><br />
-                    Price range for flights: $
-                    <input type="number" name="flights-lowprice" /> - $<input type="number" name="flights-highprice" /><br /><br />
-                    Living accomodations:
-                    <input type="checkbox" name="hotelcb" />Hotel
-                    <input type="checkbox" name="hostelcb" />Hostel
-                    <input type="checkbox" name="airbnbcb" />Airbnb<br /><br />
-                    Price range for activities: $
-                    <input type="number" name="activites-lowprice" /> - $<input type="number" name="activites-highprice" /><br /><br />
-                    Travel accomodations: 
-                    <input type="checkbox" name="taxicb" />Taxi
-                    <input type="checkbox" name="buscb" />Bus
-                    <input type="checkbox" name="traincb" />Train
-                    <input type="checkbox" name="ferrbycb" />Ferry
-                    <input type="checkbox" name="ubercb" />Uber<br /><br />
-                    <input type="submit" value="Enter" class="button" />
-                </form>
+                Enter current location:
+                <input type="text" id="current" /><br /><br />
+                Enter travel destination:
+                <input type="text" id="destination" /><br /><br />
+                Select a departure date:
+                <input type="date" id="start-date" min="2018-01-11" /><br /><br />
+                Select a return date:
+                <input type="date" id="end-date" min="2018-01-12" /><br /><br />
+                Price range for flights: $
+                <input type="number" id="flights-lowprice" /> - $<input type="number" id="flights-highprice" /><br /><br />
+                Living accomodations:
+                <input type="checkbox" id="hotelcb" />Hotel
+                <input type="checkbox" id="hostelcb" />Hostel
+                <input type="checkbox" id="airbnbcb" />Airbnb<br /><br />
+                Price range for activities: $
+                <input type="number" id="activities-lowprice" /> - $<input type="number" id="activities-highprice" /><br /><br />
+                Travel accomodations: 
+                <input type="checkbox" id="taxicb" />Taxi
+                <input type="checkbox" id="buscb" />Bus
+                <input type="checkbox" id="traincb" />Train
+                <input type="checkbox" id="ferrycb" />Ferry
+                <input type="checkbox" id="ubercb" />Uber<br /><br />
+                <button id="submit" onclick="storeFlightData()" class="button">Enter</button>
             </div>
 
             <div class="footer">
                 <h1>Copyright &copy; TravelAgency.com</h1>
             </div>
         </div>
+
+        <script>
+            console.log("local storage");
+            for (i = 0; i < localStorage.length; i++)   {
+                console.log(localStorage.key(i) + "=[" + localStorage.getItem(localStorage.key(i)) + "]");
+            }
+
+            console.log("session storage");
+            for (i = 0; i < sessionStorage.length; i++) {
+                console.log(sessionStorage.key(i) + "=[" + sessionStorage.getItem(sessionStorage.key(i)) + "]");
+            }
+        </script>
+
+        <script src="travelinfo.js"></script>
     </body>
 </html>

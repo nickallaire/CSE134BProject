@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Flight Data</title>
+        <link rel="stylesheet" href="stylesheet.css" />
+        <title>Travel Agent</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <img class="header-img" src="https://images.fineartamerica.com/images-medium-large-5/7-background-travel-concept-potowizard-thailand.jpg" alt="Logo" />
+                <div class="title">Travel Agency</div>
+            </div>
+
+            <div class="user-flights">
+                <label style=""><b>Customer Data</b></label><br /><br />
+                <label id="current-location"></label><br /><br />
+                <label id="travel-destination"></label><br /><br />
+                <label id="departure-date"></label><br /><br />
+                <label id="return-date"></label><br /><br />
+                <label id="priceFlights-from"></label><br /><br />
+                <label id="priceFlights-to"></label><br /><br />
+            </div>
+
+            <div class="flight-container">
+                <h1>Enter flights for customer:</h1>
+                <div class="flight-data">
+                    <h4>Flight 1</h4>
+                    <label>Enter airline:</label>
+                    <input type="text" name="airline" /><br /><br />
+                    <label>Enter flight departure location:</label>
+                    <input type="text" name="departure" /><br /><br />
+                    <label>Enter flight departure time/date:</label>
+                    <input type="text" name="depart-time" /><br /><br />
+                    <label>Enter flight arrival location:</label>
+                    <input type="text" name="arrival" /><br /><br />
+                    <label>Enter flight arrival time/date:</label>
+                    <input type="text" name="arriv-time" /><br /><br />
+                    <label>Enter flight price: $</label>
+                    <input type="number" name="flight-price" /><br /><br />
+                </div>
+            </div>
+
+            <div class="info">
+                <br />
+                <button id="add-flights" onclick="addNewFlight()">Add Flight</button>
+                <br /><br />
+                <button id="submit" onclick="checkData()">Submit</button>
+            </div>
+
+            <div class="chatbox" id="chat">
+                <div class="chatbox-button">
+                    <button onclick="alterChatbox()" id="chat-button">Chatting with an agent</button>
+                </div>
+                <div class="chatbox-messages" id="chat-message">
+                </div>
+                <div class="chatbox-content" id="chat-content">
+                    <input type="text" name="message" />
+                    <input type="submit" value="Send" />
+                </div>
+            </div>
+            <div class="footer">
+                <h1>Copyright &copy; TravelAgency.com</h1>
+            </div>
+        </div>
+
+        <script>
+            function alterChatbox() {
+                var chat = document.getElementById('chat');
+                var chatMessage = document.getElementById('chat-message');
+                var chatContent = document.getElementById('chat-content');
+                var chatButton = document.getElementById('chat-button');
+
+                if (chatMessage.style.display === "none") {
+                    chatMessage.style.display = "block";
+                    chatContent.style.display = "block";
+                    chatButton.style.bottom = "240px";
+                } else {
+                    chatMessage.style.display = "none";
+                    chatContent.style.display = "none";
+                    chatButton.style.bottom = "0px";
+                }
+            }
+        </script>
+
+        <script src="travelagentflights.js"></script>
+    </body>
+</html>

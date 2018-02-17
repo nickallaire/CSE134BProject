@@ -23,20 +23,20 @@
 
         <div class="info">
             <h1>Login</h1>
-            <form name="login" action="travelinfo.html" method="get">
-                Username:
-                <input type="email" name="email" /> <br /><br />
-                Password:
-                <input type="password" name="password" /><br /><br />
-                <input type="checkbox" name="signup" /> New User<br /><br />
-                <input type="submit" value="Login" class="button" />
-            </form>
+            Email:
+            <input id="email" type="email" name="email" /> <br /><br />
+            Password:
+            <input id="password" type="password" name="password" /><br /><br />
+            <input id="newUser" type="checkbox" name="signup" /> New User<br /><br />
+            <button id="submit" class="button" onclick="checkData()" >Login/Signup</button>
         </div>
 
         <div class="footer">
             <h1>Copyright &copy; TravelAgency.com</h1>
         </div>
     </div>
+
+    <script src="login.js"></script>
 </body>
 
 </html>

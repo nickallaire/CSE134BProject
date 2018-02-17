@@ -59,6 +59,14 @@
     <Content Include="hotels.html" />
     <Content Include="verify.html" />
     <Content Include="success.html" />
+    <Content Include="login.js" />
+    <Content Include="personalinfo.js" />
+    <Content Include="checkout.js" />
+    <Content Include="index.js" />
+    <Content Include="travelagentflights.html" />
+    <Content Include="travelagentflights.js" />
+    <Content Include="travelinfo.js" />
+    <Content Include="flightdata.js" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">

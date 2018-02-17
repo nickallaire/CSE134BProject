@@ -49,60 +49,11 @@
         </div>
 
         <div class="flight-data-container info">
-            <form action="attractions.html">
-                <div class="flight">
-                    <div class="flight-first">
-                        <input type="radio" name="flight" value="delta-123" />
-                    </div>
-                    <div class="flight-left">
-                        <h1 class="airline">Delta</h1>
-                        <h3 class="path">LAX &rarr; PAR</h3>
-                    </div>
-                    <div class="flight-mid">
-                        <h4 class="depart">Departs: 3:30pm Dec 21st</h4>
-                        <h4 class="return">Arrives: 10:30pm Jan 3rd</h4>
-                    </div>
-                    <div class="flight-right">
-                        <h3 class="price">$331</h3><br />
-                    </div>
-                </div>
+            
+        </div>
 
-                <div class="flight">
-                    <div class="flight-first">
-                        <input type="radio" name="flight" value="southwest-456" />
-                    </div>
-                    <div class="flight-left">
-                        <h1 class="airline">Southwest</h1>
-                        <h3 class="path">LON &rarr; AUS</h3>
-                    </div>
-                    <div class="flight-mid">
-                        <h4 class="depart">Departs: 8:00am Feb 8th</h4>
-                        <h4 class="return">Arrives: 6:25pm Feb 9th</h4>
-                    </div>
-                    <div class="flight-right">
-                        <h3 class="price">$225</h3>
-                    </div>
-                </div>
-
-                <div class="flight">
-                    <div class="flight-first">
-                        <input type="radio" name="flight" value="frontier-789" />
-                    </div>
-                    <div class="flight-left">
-                        <h1 class="airline">Frontier</h1>
-                        <h3 class="path">TOK &rarr; FRA</h3>
-                    </div>
-                    <div class="flight-mid">
-                        <h4 class="depart">Departs: 4:00pm Aug 31st</h4>
-                        <h4 class="return">Arrives: 1:45am Sep 1st</h4>
-                    </div>
-                    <div class="flight-right">
-                        <h3 class="price">$150</h3>
-                    </div>
-                </div>
-
-                <input type="submit" value="Choose Flight" class="button centered-button" />
-            </form>
+        <div class="info">
+            <button onclick="checkData()" class="button centered-button">Choose Flight</button>
         </div>
 
         <div class="chatbox" id="chat">
@@ -143,5 +94,7 @@
         }
     }
     </script>
+
+    <script src="flightdata.js"></script>
 </body>
 </html>

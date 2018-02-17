@@ -58,17 +58,33 @@
                 </div>
                 <br />
                 <br />
-                <form name="checkout" action="success.html" method="get">
-                    Name on credit card:
-                    <input type="text" name="fullname" /> <br /><br />
-                    Credit Card #
-                    <input type="number" name="ccnumber" /><br /><br />
-                    CCV:
-                    <input type="number" name="ccv" /><br /><br />
-                    Expiration Date:
-                    <input type="date" name="expiration" min="2018-01-11" /><br /><br />
-                    <input type="submit" value="Purchase" class="button" />
-                </form>
+
+                Name on credit card:
+                <input id="fullname" type="text" name="fullname" autocomplete="off" /> <br /><br />
+                Credit Card #
+                <input id="ccnumber" type="number" name="ccnumber" autocomplete="off" /><br /><br />
+                CCV:
+                <input id="ccv" type="number" name="ccv" autocomplete="off" /><br /><br />
+                Expiration Date:
+                <input id="expdate" type="date" name="expiration" autocomplete="off" /><br /><br />
+                <script>    
+                    var today = new Date();
+                    var dd = today.getDate();
+                    var mm = today.getMonth() + 1;
+                    var yyyy = today.getFullYear();
+
+                    if (dd < 10) {
+                        dd = '0' + dd;
+                    }
+
+                    if (mm < 10) {
+                        mm = '0' + mm;
+                    }
+
+                    today = yyyy + '-' + mm + '-' + dd;
+                    document.getElementById("expdate").min = today;
+                </script>
+                <button id="submit" class="button" onclick="checkData()">Purchase</button>
             </div>
 
             <div class="chatbox" id="chat">
@@ -106,6 +122,8 @@
             }
         }
         </script>
+
+        <script src="checkout.js"></script>
 
     </body>
 </html>
