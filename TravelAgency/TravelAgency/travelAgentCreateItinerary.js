@@ -79,7 +79,6 @@ function createBr() {
 
 function finish() {
     days = document.getElementsByClassName('create-itinerary-day-container')
-    console.log(days)
     var itinerary = []
     for (let i = 0; i < days.length; i++) {
         // access the day and it's details
@@ -88,7 +87,6 @@ function finish() {
         var date = inputs[0].value
         var location = inputs[1].value
         var divs = getListOfElements(day.children, "div")
-        console.log(divs)
         // access the events of that day
         var itineraryEvents = []
         for (let x = 0; x < divs.length; x++) {
