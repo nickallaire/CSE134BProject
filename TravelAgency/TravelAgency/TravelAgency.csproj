@@ -46,9 +46,6 @@
     <Content Include="index.html" />
     <Content Include="stylesheet.css" />
     <Content Include="about.html" />
-    <Content Include="bookflights.html" />
-    <Content Include="bookhotels.html" />
-    <Content Include="signup.html" />
     <Content Include="contact.html" />
     <Content Include="travelinfo.html" />
     <Content Include="personalinfo.html" />
@@ -70,7 +67,6 @@
     <Content Include="travelagentattractions.html" />
     <Content Include="travelagentattractions.js" />
     <Content Include="attractions.js" />
-    <Content Include="bookflights.js" />
     <Content Include="chatbox.js" />
     <Content Include="hotels.js" />
     <Content Include="travelAgentCreateItinerary.html" />
