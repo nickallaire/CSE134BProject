@@ -67,6 +67,16 @@
     <Content Include="travelagentflights.js" />
     <Content Include="travelinfo.js" />
     <Content Include="flightdata.js" />
+    <Content Include="travelagentattractions.html" />
+    <Content Include="travelagentattractions.js" />
+    <Content Include="attractions.js" />
+    <Content Include="bookflights.js" />
+    <Content Include="chatbox.js" />
+    <Content Include="hotels.js" />
+    <Content Include="travelAgentCreateItinerary.html" />
+    <Content Include="travelAgentCreateItinerary.js" />
+    <Content Include="travelagenthotels.html" />
+    <Content Include="travelagenthotels.js" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">

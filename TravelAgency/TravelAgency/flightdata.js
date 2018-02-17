@@ -88,7 +88,7 @@ function checkData() {
         };
 
         sessionStorage.setItem("chosenFlight", JSON.stringify(flightChosen));
-        window.location.href = "attractions.html";
+        window.location.href = "travelagentattractions.html";
     } else {
         alert("Please select a flight");
     }

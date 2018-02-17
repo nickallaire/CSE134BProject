@@ -1,12 +1,15 @@
 ﻿sessionStorage.setItem('flight-count', 1);
 var userData = JSON.parse(sessionStorage.getItem('userTravelData'));
-console.log("USER DATA " + userData);
 document.getElementById("current-location").innerHTML = 'Customer Location: ' + userData.current;
 document.getElementById("travel-destination").innerHTML = 'Travel Destination: ' + userData.travelDest;
 document.getElementById("departure-date").innerHTML = 'Trip Start Date: ' + userData.startDate;
 document.getElementById("return-date").innerHTML = 'Trip End Date: ' + userData.endDate;
 document.getElementById("priceFlights-from").innerHTML = 'Flight Price Low: ' + userData.priceRangeLow;
 document.getElementById("priceFlights-to").innerHTML = 'Flight Price High: ' + userData.priceRangeHigh;
+document.getElementById("living").innerHTML = 'Accomodation preferences: ' + userData.living;
+document.getElementById("transportation").innerHTML = 'Transportation preferences: ' + userData.transportation;
+document.getElementById("priceFlights-from").innerHTML = 'Attractions Price Low: ' + userData.activityLowPrice;
+document.getElementById("priceFlights-to").innerHTML = 'Attractions Price High: ' + userData.activityHighPrice;
 
 function addNewFlight() {
     var div = document.createElement('div');
