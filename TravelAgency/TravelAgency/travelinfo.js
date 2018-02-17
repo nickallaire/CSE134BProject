@@ -1,4 +1,32 @@
-﻿function storeFlightData() {
+﻿var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth() + 1;
+var yyyy = today.getFullYear();
+
+if (dd < 10) {
+    dd = '0' + dd;
+}
+
+var dt = Number(dd) + 1;
+
+if (mm < 10) {
+    mm = '0' + mm;
+}
+
+today = yyyy + '-' + mm + '-' + dd;
+var tomorrow = yyyy + '-' + mm + '-'+ + dt;
+var start = document.getElementById("start-date");
+var end = document.getElementById("end-date");
+start.min = today;
+end.min = tomorrow;
+
+function setReturn() {
+    var end = document.getElementById("end-date");
+    var start = document.getElementById("start-date").value;
+    end.min = start;
+}
+
+function storeFlightData() {
     // inputs
     var current = document.getElementById("current").value;
     var travelDest = document.getElementById("destination").value;
@@ -8,6 +36,7 @@
     var endDate = document.getElementById("end-date").value;
     var activityLowprice = document.getElementById("activities-lowprice").value;
     var activityHighprice = document.getElementById("activities-highprice").value;
+    var errorMessage = "Missing input fields, make sure to fill in everything!";
 
     // check boxes
     var cb1 = document.getElementById("hotelcb").checked;
@@ -20,6 +49,39 @@
     var cb8 = document.getElementById("ubercb").checked;
 
     var validData = 1;
+
+    if (current === "") {
+        validData = 0;
+    }
+
+    if (travelDest === "") {
+        validData = 0;
+    }
+
+    if (startDate === "") {
+        validData = 0;
+    }
+
+    if (endDate === "") {
+        validData = 0;
+    }
+
+    if (startDate > endDate) {
+        validDate = 0;
+        errorMessage = "Incorrect flight dates, make sure departure is before return";
+    }
+
+
+
+    if (Number(priceRangelow) > Number(priceRangehigh)) {
+        validData = 0;
+        errorMessage = "Incorrect flight price range, put the lower number on the left";
+    }
+
+    if (Number(activityLowprice) > Number(activityHighprice)) {
+        validData = 0;
+        errorMessage = "Incorrect activity price range, put the lower number on the left";
+    }
 
     var living = [];
     if (cb1) {
@@ -72,8 +134,8 @@
     if (validData) {
         sessionStorage.setItem('userTravelData', JSON.stringify(userTravelData));
         window.location.href = "travelagentflights.html";
-
-
+    } else {
+        alert(errorMessage);
     }
 }
 

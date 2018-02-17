@@ -1,4 +1,6 @@
-﻿function checkData() {
+﻿sessionStorage.clear();
+
+function checkData() {
     var email = document.getElementById("email").value;
 
     if (email === "") {

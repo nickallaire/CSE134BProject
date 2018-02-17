@@ -4,7 +4,6 @@
         <meta charset="utf-8" />
         <title>Travel Info</title>
         <link rel="stylesheet" href="stylesheet.css" />
-        <script src="travelinfo.js"></script>
     </head>
     <body>
         <div class="container">
@@ -54,9 +53,9 @@
                 Enter travel destination:
                 <input type="text" id="destination" /><br /><br />
                 Select a departure date:
-                <input type="date" id="start-date" min="2018-01-11" /><br /><br />
+                <input onchange="setReturn()" type="date" id="start-date" /><br /><br />
                 Select a return date:
-                <input type="date" id="end-date" min="2018-01-12" /><br /><br />
+                <input type="date" id="end-date" /><br /><br />
                 Price range for flights: $
                 <input type="number" id="flights-lowprice" /> - $<input type="number" id="flights-highprice" /><br /><br />
                 Living accomodations:
