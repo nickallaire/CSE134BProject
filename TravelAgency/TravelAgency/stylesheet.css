@@ -618,6 +618,18 @@ div.chatbox-button button {
     width: 265px;
 }
 
+.create-itinerary-add-more-details {
+    margin-left: 16px;
+}
+
+.create-itinerary-day-event {
+    margin-left: 16px;
+}
+
+.create-itinerary-add-new-day {
+    background-color: blue;
+    color: white;
+}
 
 
 
