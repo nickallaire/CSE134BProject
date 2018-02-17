@@ -40,6 +40,7 @@ function alterChatbox() {
 }
 
 function sendMessage() {
+    var ta = sessionStorage.getItem('travelAgent');
     message = document.getElementById("message").value
     // no message entries stored, create a new one
     if(window.sessionStorage.getItem("messages") == null) {
@@ -48,16 +49,22 @@ function sendMessage() {
         messages = JSON.parse(window.sessionStorage.getItem("messages"))
     }
     // append the message to the list
-    messages.push(message)
+    messages.push([message, Number(ta)])
     window.sessionStorage.setItem("messages", JSON.stringify(messages))
 
-    addEntry(message)
+    addEntry([message, Number(ta)])
 }
 
 function addEntry(message) {
     var li = document.createElement("li");
-    var t = document.createTextNode(message);    
+    var t = document.createTextNode(message[0]);    
     li.appendChild(t);
+    console.log('ta = ' + message[1]);
+    if (message[1]) {
+        li.style.textAlign = "left";
+        li.style.transform = "translate(-5px, 0)";
+        li.style.color = "red";
+    }
     document.getElementById("messages-list").appendChild(li);
     document.getElementById("message").value = ""
     updateScroll();

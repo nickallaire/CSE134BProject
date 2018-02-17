@@ -88,11 +88,14 @@
             <div class="chatbox-button">
                 <button onclick="alterChatbox()" id="chat-button">Chatting with an agent</button>
             </div>
+
             <div class="chatbox-messages" id="chat-message">
+                <ul id="messages-list"></ul>
             </div>
+
             <div class="chatbox-content" id="chat-content">
-                <input type="text" name="message" />
-                <input type="submit" value="Send" />
+                <input type="text" id="message" />
+                <button onclick="sendMessage()" id="submit-message-button">Submit</button>
             </div>
         </div>
         <div class="footer">

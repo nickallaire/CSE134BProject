@@ -683,11 +683,12 @@ div.user-itinerary1 {
 }
 
 .chatbox-messages > ul > li {
-    width: 100%;
+    width: 90%;
     float: right;
     text-align: right;
     margin-right: 10px;
-    margin-top: 10px;    
+    margin-top: 10px; 
+    word-wrap: break-word;  
 }
 
 div.chatbox-button button {

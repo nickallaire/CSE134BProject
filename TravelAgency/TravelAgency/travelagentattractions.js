@@ -1,4 +1,6 @@
 ﻿sessionStorage.setItem('attraction-count', 1);
+sessionStorage.setItem('flight-count', 1);
+sessionStorage.setItem('travelAgent', 1);
 var userData = JSON.parse(sessionStorage.getItem('userTravelData'));
 document.getElementById("current-location").innerHTML = 'Customer Location: ' + userData.current;
 document.getElementById("travel-destination").innerHTML = 'Travel Destination: ' + userData.travelDest;

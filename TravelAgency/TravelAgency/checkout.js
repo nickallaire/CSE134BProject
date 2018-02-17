@@ -1,4 +1,5 @@
-﻿var flightData = JSON.parse(sessionStorage.getItem('chosenFlight'));
+﻿sessionStorage.setItem('travelAgent', 0);
+var flightData = JSON.parse(sessionStorage.getItem('chosenFlight'));
 var attractionData = JSON.parse(sessionStorage.getItem('chosenAttractions'));
 var hotelData = JSON.parse(sessionStorage.getItem('chosenHotel'));
 var userData = JSON.parse(sessionStorage.getItem('userTravelData'));
@@ -24,8 +25,10 @@ console.log(diff);
 var hotelTotal = Number(hotelData.hotelPrice.substring(1)) * diff;
 
 var sum = 0;
-for (let i = 0; i < attractionData.length; i++) {   
-    sum = sum + Number(attractionData[i].activityPrice.substring(1)); 
+if (attractionData) {
+    for (let i = 0; i < attractionData.length; i++) {   
+        sum = sum + Number(attractionData[i].activityPrice.substring(1)); 
+    }
 }
 
 var total = sum + hotelTotal + Number(flightData.price.substring(1)) + 198 + 99;

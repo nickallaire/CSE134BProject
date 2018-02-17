@@ -1,4 +1,5 @@
-﻿var data = JSON.parse(sessionStorage.getItem('attractionData'));
+﻿sessionStorage.setItem('travelAgent', 0);
+var data = JSON.parse(sessionStorage.getItem('attractionData'));
 console.log(data[0]);
 
 var row = -1;

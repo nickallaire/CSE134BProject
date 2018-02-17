@@ -1,3 +1,4 @@
+sessionStorage.setItem('travelAgent', 0);
 var data = JSON.parse(sessionStorage.getItem('accomodationData'));
 console.log(data[0]);
 

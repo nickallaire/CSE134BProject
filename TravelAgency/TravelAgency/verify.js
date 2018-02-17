@@ -1,4 +1,5 @@
-﻿var itinerary = JSON.parse(sessionStorage.getItem('itinerary'));
+﻿sessionStorage.setItem('travelAgent', 0);
+var itinerary = JSON.parse(sessionStorage.getItem('itinerary'));
 console.log(itinerary);
 
 /*

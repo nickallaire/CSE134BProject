@@ -1,4 +1,5 @@
-﻿﻿var data = JSON.parse(sessionStorage.getItem('flightData'));
+﻿sessionStorage.setItem('travelAgent', 0);
+﻿var data = JSON.parse(sessionStorage.getItem('flightData'));
 console.log(data[0]);
 
 for (let i = 0; i < data.length; i++) {

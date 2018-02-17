@@ -1,47 +1,83 @@
+sessionStorage.setItem('flight-count', 1);
+sessionStorage.setItem('travelAgent', 1);
 var userData = JSON.parse(sessionStorage.getItem('userTravelData'));
-var startDate = userData.startDate;
-var endDate = userData.endDate;
+if (userData) {
+    var startDate = userData.startDate;
+    var endDate = userData.endDate;
 
-var dateInput = document.getElementById("date");
-dateInput.min = startDate;
-dateInput.max = endDate;
 
-var flightData = JSON.parse(sessionStorage.getItem('chosenFlight'));
-var attractionData = JSON.parse(sessionStorage.getItem('chosenAttractions'));
-var hotelData = JSON.parse(sessionStorage.getItem('chosenHotel'));
+    var dateInput = document.getElementById("date");
+    dateInput.min = startDate;
+    dateInput.max = endDate;
 
-//Display Customer Data
-document.getElementById("current-location").innerHTML = 'Customer Location: ' + userData.current;
-document.getElementById("travel-destination").innerHTML = 'Travel Destination: ' + userData.travelDest;
-document.getElementById("departure-date").innerHTML = 'Trip Start Date: ' + userData.startDate;
-document.getElementById("return-date").innerHTML = 'Trip End Date: ' + userData.endDate;
-document.getElementById("priceFlights-from").innerHTML = 'Flight Price Low: $' + userData.priceRangeLow;
-document.getElementById("priceFlights-to").innerHTML = 'Flight Price High: $' + userData.priceRangeHigh;
-document.getElementById("living").innerHTML = 'Accomodation pref: ' + userData.living;
-document.getElementById("transportation").innerHTML = 'Transportation pref: ' + userData.transportation;
-document.getElementById("priceActivities-from").innerHTML = 'Attractions Price Low: $' + userData.activityLowPrice;
-document.getElementById("priceActivities-to").innerHTML = 'Attractions Price High: $' + userData.activityHighPrice;
+    var flightData = JSON.parse(sessionStorage.getItem('chosenFlight'));
+    var attractionData = JSON.parse(sessionStorage.getItem('chosenAttractions'));
+    var hotelData = JSON.parse(sessionStorage.getItem('chosenHotel'));
 
-// Display Flight Data
-document.getElementById("airline").innerHTML = 'Airline: ' + flightData.airline;
-document.getElementById("path").innerHTML = 'Path: ' + flightData.path;
-document.getElementById("dep").innerHTML = flightData.dep;
-document.getElementById("arr").innerHTML = flightData.arr;
-document.getElementById("price").innerHTML = 'Price: ' + flightData.price;
+    //Display Customer Data
+    document.getElementById("current-location").innerHTML = 'Customer Location: ' + userData.current;
+    document.getElementById("travel-destination").innerHTML = 'Travel Destination: ' + userData.travelDest;
+    document.getElementById("departure-date").innerHTML = 'Trip Start Date: ' + userData.startDate;
+    document.getElementById("return-date").innerHTML = 'Trip End Date: ' + userData.endDate;
+    document.getElementById("priceFlights-from").innerHTML = 'Flight Price Low: $' + userData.priceRangeLow;
+    document.getElementById("priceFlights-to").innerHTML = 'Flight Price High: $' + userData.priceRangeHigh;
+    document.getElementById("living").innerHTML = 'Accomodation pref: ' + userData.living;
+    document.getElementById("transportation").innerHTML = 'Transportation pref: ' + userData.transportation;
+    document.getElementById("priceActivities-from").innerHTML = 'Attractions Price Low: $' + userData.activityLowPrice;
+    document.getElementById("priceActivities-to").innerHTML = 'Attractions Price High: $' + userData.activityHighPrice;
 
-// Display Attraction Data
-for (let i = 0; i < attractionData.length; i++) {
+    // Display Flight Data
+    document.getElementById("airline").innerHTML = 'Airline: ' + flightData.airline;
+    document.getElementById("path").innerHTML = 'Path: ' + flightData.path;
+    document.getElementById("dep").innerHTML = flightData.dep;
+    document.getElementById("arr").innerHTML = flightData.arr;
+    document.getElementById("price").innerHTML = 'Price: ' + flightData.price;
+
+    // Display Attraction Data
+    if (attractionData) {
+        for (let i = 0; i < attractionData.length; i++) {
+            var label1 = document.createElement('label');
+            var label2 = document.createElement('label');
+            var label3 = document.createElement('label');
+            var label4 = document.createElement('label');
+
+            var par = document.getElementsByClassName("user-itinerary1")[0];
+
+            label1.innerHTML = 'Name: ' + attractionData[i].activityName;
+            label2.innerHTML = 'Location: ' + attractionData[i].activityLocation;
+            label3.innerHTML = 'Date/Time: ' + attractionData[i].activityDateTime;
+            label4.innerHTML = 'Price: ' + attractionData[i].activityPrice;
+
+            par.appendChild(label1);
+            par.appendChild(createBr());
+            par.appendChild(createBr());
+            par.appendChild(label2);
+            par.appendChild(createBr());
+            par.appendChild(createBr());
+            par.appendChild(label3);
+            par.appendChild(createBr());
+            par.appendChild(createBr());
+            par.appendChild(label4);
+            par.appendChild(createBr());
+            par.appendChild(createBr());
+            par.appendChild(createBr());
+            par.appendChild(createBr());
+        }
+    }
+
+    // Display Hotel Data
     var label1 = document.createElement('label');
     var label2 = document.createElement('label');
     var label3 = document.createElement('label');
     var label4 = document.createElement('label');
+    var label5 = document.createElement('label');
 
     var par = document.getElementsByClassName("user-itinerary1")[0];
-
-    label1.innerHTML = 'Name: ' + attractionData[i].activityName;
-    label2.innerHTML = 'Location: ' + attractionData[i].activityLocation;
-    label3.innerHTML = 'Date/Time: ' + attractionData[i].activityDateTime;
-    label4.innerHTML = 'Price: ' + attractionData[i].activityPrice;
+    label1.innerHTML = '<b>Hotel Data</b>'; 
+    label2.innerHTML = 'Type: ' + hotelData.hotelType;
+    label3.innerHTML = 'Name: ' + hotelData.hotelName;
+    label4.innerHTML = 'Location: ' + hotelData.hotelLocation;
+    label5.innerHTML = 'Price (per night): ' + hotelData.hotelPrice;
 
     par.appendChild(label1);
     par.appendChild(createBr());
@@ -55,43 +91,13 @@ for (let i = 0; i < attractionData.length; i++) {
     par.appendChild(label4);
     par.appendChild(createBr());
     par.appendChild(createBr());
-    par.appendChild(createBr());
-    par.appendChild(createBr());
+    par.appendChild(label5);
+    console.log(document.getElementsByClassName("user-itinerary1")[0].clientHeight);
+    var it = document.getElementsByClassName("user-itinerary")[0].clientHeight;
+    var it1 = document.getElementsByClassName("user-itinerary1")[0].clientHeight;
+    var size = (it > it1) ? it : it1;
+    document.getElementsByClassName("info")[0].style.paddingBottom = size + "px";
 }
-
-// Display Hotel Data
-var label1 = document.createElement('label');
-var label2 = document.createElement('label');
-var label3 = document.createElement('label');
-var label4 = document.createElement('label');
-var label5 = document.createElement('label');
-
-var par = document.getElementsByClassName("user-itinerary1")[0];
-label1.innerHTML = '<b>Hotel Data</b>'; 
-label2.innerHTML = 'Type: ' + hotelData.hotelType;
-label3.innerHTML = 'Name: ' + hotelData.hotelName;
-label4.innerHTML = 'Location: ' + hotelData.hotelLocation;
-label5.innerHTML = 'Price (per night): ' + hotelData.hotelPrice;
-
-par.appendChild(label1);
-par.appendChild(createBr());
-par.appendChild(createBr());
-par.appendChild(label2);
-par.appendChild(createBr());
-par.appendChild(createBr());
-par.appendChild(label3);
-par.appendChild(createBr());
-par.appendChild(createBr());
-par.appendChild(label4);
-par.appendChild(createBr());
-par.appendChild(createBr());
-par.appendChild(label5);
-console.log(document.getElementsByClassName("user-itinerary1")[0].clientHeight);
-var it = document.getElementsByClassName("user-itinerary")[0].clientHeight;
-var it1 = document.getElementsByClassName("user-itinerary1")[0].clientHeight;
-var size = (it > it1) ? it : it1;
-document.getElementsByClassName("info")[0].style.paddingBottom = size + "px";
-
 function addNewDay() {
     var userData = JSON.parse(sessionStorage.getItem('userTravelData'));
     var startDate = userData.startDate;

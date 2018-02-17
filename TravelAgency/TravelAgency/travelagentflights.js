@@ -1,4 +1,5 @@
 ﻿sessionStorage.setItem('flight-count', 1);
+sessionStorage.setItem('travelAgent', 1);
 var userData = JSON.parse(sessionStorage.getItem('userTravelData'));
 document.getElementById("current-location").innerHTML = 'Customer Location: ' + userData.current;
 document.getElementById("travel-destination").innerHTML = 'Travel Destination: ' + userData.travelDest;
@@ -102,8 +103,8 @@ function checkData() {
         var flightData = {
                 airline: flightInputs[0].value,
                 departure: flightInputs[1].value,
-                departTime: flightInputs[2].value,
-                arrival: flightInputs[3].value,
+                arrival: flightInputs[2].value,
+                departTime: flightInputs[3].value,
                 arrivTime: flightInputs[4].value,
                 flightPrice: flightInputs[5].value
         };
