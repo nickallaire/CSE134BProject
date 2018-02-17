@@ -1,4 +1,4 @@
-﻿var data = JSON.parse(sessionStorage.getItem('flightData'));
+﻿﻿var data = JSON.parse(sessionStorage.getItem('flightData'));
 console.log(data[0]);
 
 for (let i = 0; i < data.length; i++) {

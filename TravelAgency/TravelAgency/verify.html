@@ -118,43 +118,28 @@
         </div>
 
         <div class="chatbox" id="chat">
-            <div class="chatbox-button">
-                <button onclick="alterChatbox()" id="chat-button">Chatting with an agent</button>
+                <div class="chatbox-button">
+                    <button onclick="alterChatbox()" id="chat-button">Chatting with an agent</button>              
+                </div>
+    
+                <div class="chatbox-messages" id="chat-message">
+                    <ul id="messages-list">    
+    
+                    </ul>
+                </div>
+    
+                <div class="chatbox-content" id="chat-content">
+                    <input type="text" id="message" />
+                    <button onclick="sendMessage()" id="submit-message-button">Submit</button> 
+                </div>
             </div>
-
-            <div class="chatbox-messages" id="chat-message">
-
-            </div>
-
-            <div class="chatbox-content" id="chat-content">
-                <input type="text" name="message" />
-                <input type="submit" value="Send" />
+    
+            <div class="footer">
+                <h1>Copyright &copy; TravelAgency.com</h1>
             </div>
         </div>
-
-        <div class="footer">
-            <h1>Copyright &copy; TravelAgency.com</h1>
-        </div>
-    </div>
-
-    <script>
-    function alterChatbox() {
-        var chat = document.getElementById('chat');
-        var chatMessage = document.getElementById('chat-message');
-        var chatContent = document.getElementById('chat-content');
-        var chatButton = document.getElementById('chat-button');
-
-        if (chatMessage.style.display === "none") {
-            chatMessage.style.display = "block";
-            chatContent.style.display = "block";
-            chatButton.style.bottom = "240px";
-        } else {
-            chatMessage.style.display = "none";
-            chatContent.style.display = "none";
-            chatButton.style.bottom = "0px";
-        }
-    }
-    </script>
+        <script src="chatbox.js"></script> 
+    
 
 </body>
 </html>

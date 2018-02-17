@@ -13,6 +13,18 @@ ul {
     text-align: center;
 }
 
+.list {
+    clear: both;
+}
+
+ul::after {
+    clear: both;
+}
+
+input[type="radio"] {
+    display: block;
+}
+
 li {
     float: left;
     width: 20%;
@@ -68,6 +80,15 @@ div.footer h1 {
 
 div.reviews {
     padding-bottom: 100px;
+}
+
+div.reviews::after {
+    clear: both;
+}
+
+
+.clear {
+    clear: both;
 }
 
 div.review {
@@ -159,17 +180,18 @@ div.chatbox {
 div.chatbox-messages {
     position: absolute;
     z-index: 10;
-    width: 250px;
+    width: 265px;
     height: 210px;
     bottom: 30px;
     background-color: #e6f2ff;
+    overflow-y: scroll;
 }
 
 div.chatbox-content {
     position: absolute;
     z-index: 10;
     height: 20px;
-    width: 245px;
+    width: 260px;
     padding-top: 5px;
     padding-left: 5px;
     padding-bottom: 5px;
@@ -248,7 +270,6 @@ div.flight h3.path {
 }
 
 input[type="radio"] {
-    display: inline-block;
     position: absolute;
     top: 40%;
     left: 0.75%;
@@ -594,3 +615,36 @@ div.user-flights {
         margin-left: 19%;
     }
 }
+
+.chatbox-messages > ul {
+    background-color: #e6f2ff;
+    margin-top: 5px;
+}
+
+.chatbox-messages > ul > li {
+    width: 100%;
+    float: right;
+    text-align: right;
+    margin-right: 10px;
+    margin-top: 10px;    
+}
+
+div.chatbox-button button {
+    width: 265px;
+}
+
+.create-itinerary-add-more-details {
+    margin-left: 16px;
+}
+
+.create-itinerary-day-event {
+    margin-left: 16px;
+}
+
+.create-itinerary-add-new-day {
+    background-color: blue;
+    color: white;
+}
+
+
+

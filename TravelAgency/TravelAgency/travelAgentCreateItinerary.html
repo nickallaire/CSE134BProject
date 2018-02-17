@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Create Itinerary</title>
+        <link rel="stylesheet" href="stylesheet.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <img class="header-img" src="https://images.fineartamerica.com/images-medium-large-5/7-background-travel-concept-potowizard-thailand.jpg" alt="Logo" />
+                <div class="title">Travel Agency</div>
+            </div>
+            <div class="list">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                </ul>
+            </div>
+
+            <div class="status-container">
+                    <div class="statusbar-label-container">
+                    <p class="statusbar-label">Personal Info</p>
+                    <p class="statusbar-label">Travel Info</p>
+                    <p class="statusbar-label">Flight Results</p>
+                    <p class="statusbar-label">Attractions</p>
+                    <p class="statusbar-label">Hotels</p>
+                    <p class="statusbar-label">Verify</p>
+                    <p class="statusbar-label">Check Out</p>
+                </div>
+                <div class="statusbar-container">
+                    <div class="rectangle-filled"></div>
+                    <div class="circle-filled"></div>
+                    <div class="rectangle-filled"></div>
+                    <div class="circle-filled"></div>
+                    <div class="rectangle-filled"></div>
+                    <div class="circle-filled"></div>
+                    <div class="rectangle-filled"></div>
+                    <div class="circle-filled"></div>
+                    <div class="rectangle-filled"></div>
+                    <div class="circle-filled"></div>
+                    <div class="rectangle-filled"></div>
+                    <div class="circle-empty"></div>
+                    <div class="rectangle-empty"></div>
+                    <div class="circle-empty"></div>
+                </div>
+            </div>
+
+            <div class="info">
+                <div class="create-itinerary-container">
+                    <h1>Create Itinerary</h1>
+                    <div class="create-itinerary-day-container">
+                        Enter Date:
+                        <input type="date" name="date" min="2018-01-12" /><br /><br />
+                        Enter Location:
+                        <input type="text" name="location" /><br /><br />
+                        <div class="create-itinerary-day-event">
+                            Enter time:
+                            <input type="text" name="time" /><br /><br />      
+                            Enter event details:                      
+                            <input type="text" name="details" /><br /><br />
+                        </div>
+                    </div>
+                </div>
+                <button class="create-itinerary-add-more-details" onclick="addMoreDetails()">Add another event</button> <br /><br />
+                <button class="create-itinerary-add-new-day" onclick="addNewDay()">Add new day</button><br /><br />
+                <button class="create-itinerary-done" onclick="finish()">Done</button><br /><br />                
+            </div>
+            
+
+
+            <div class="footer">
+                <h1>Copyright &copy; TravelAgency.com</h1>
+            </div>
+        </div>
+        <script src="travelAgentCreateItinerary.js"></script>
+    </body>
+</html>
