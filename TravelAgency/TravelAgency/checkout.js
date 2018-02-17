@@ -1,4 +1,41 @@
-﻿function checkData() {
+﻿var flightData = JSON.parse(sessionStorage.getItem('chosenFlight'));
+var attractionData = JSON.parse(sessionStorage.getItem('chosenAttractions'));
+var hotelData = JSON.parse(sessionStorage.getItem('chosenHotel'));
+var userData = JSON.parse(sessionStorage.getItem('userTravelData'));
+var start = userData.startDate;
+var end = userData.endDate;
+
+var sm = Number(start.substring(5,7));
+var sd = Number(start.substring(8,10));
+
+var em = Number(end.substring(5,7));
+var ed = Number(end.substring(8,10));
+var diff;
+
+if (em === sm) {
+    diff = ed - sd;
+} else {
+    var m = em - sm - 1;
+    diff = (31 -sd) + ed + (31 * m) + 1;
+}
+
+console.log(diff);
+
+var hotelTotal = Number(hotelData.hotelPrice.substring(1)) * diff;
+
+var sum = 0;
+for (let i = 0; i < attractionData.length; i++) {   
+    sum = sum + Number(attractionData[i].activityPrice.substring(1)); 
+}
+
+var total = sum + hotelTotal + Number(flightData.price.substring(1)) + 198 + 99;
+
+document.getElementById("airfare").innerHTML = "Airfare&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$" + flightData.price.substring(1);
+document.getElementById("hotel").innerHTML = "Hotels&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$" + hotelTotal;
+document.getElementById("attractions").innerHTML = "Attractions&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$" + sum;
+document.getElementById("total").innerHTML = "Total&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$" + total;
+
+function checkData() {
     var fullName = document.getElementById("fullname").value;
     var ccNumber = document.getElementById("ccnumber").value;
     var ccv = document.getElementById("ccv").value;
@@ -51,14 +88,14 @@
     } else {
         alert(errorMessage);
     }
+}
 
-    console.log("local storage");
-    for (i = 0; i < localStorage.length; i++)   {
-        console.log(localStorage.key(i) + "=[" + localStorage.getItem(localStorage.key(i)) + "]");
-    }
+console.log("local storage");
+for (i = 0; i < localStorage.length; i++)   {
+    console.log(localStorage.key(i) + "=[" + localStorage.getItem(localStorage.key(i)) + "]");
+}
 
-    console.log("session storage");
-    for (i = 0; i < sessionStorage.length; i++) {
-        console.log(sessionStorage.key(i) + "=[" + sessionStorage.getItem(sessionStorage.key(i)) + "]");
-    }
+console.log("session storage");
+for (i = 0; i < sessionStorage.length; i++) {
+    console.log(sessionStorage.key(i) + "=[" + sessionStorage.getItem(sessionStorage.key(i)) + "]");
 }

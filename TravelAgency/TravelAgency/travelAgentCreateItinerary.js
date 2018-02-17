@@ -1,5 +1,102 @@
+var userData = JSON.parse(sessionStorage.getItem('userTravelData'));
+var startDate = userData.startDate;
+var endDate = userData.endDate;
+
+var dateInput = document.getElementById("date");
+dateInput.min = startDate;
+dateInput.max = endDate;
+
+var flightData = JSON.parse(sessionStorage.getItem('chosenFlight'));
+var attractionData = JSON.parse(sessionStorage.getItem('chosenAttractions'));
+var hotelData = JSON.parse(sessionStorage.getItem('chosenHotel'));
+
+//Display Customer Data
+document.getElementById("current-location").innerHTML = 'Customer Location: ' + userData.current;
+document.getElementById("travel-destination").innerHTML = 'Travel Destination: ' + userData.travelDest;
+document.getElementById("departure-date").innerHTML = 'Trip Start Date: ' + userData.startDate;
+document.getElementById("return-date").innerHTML = 'Trip End Date: ' + userData.endDate;
+document.getElementById("priceFlights-from").innerHTML = 'Flight Price Low: $' + userData.priceRangeLow;
+document.getElementById("priceFlights-to").innerHTML = 'Flight Price High: $' + userData.priceRangeHigh;
+document.getElementById("living").innerHTML = 'Accomodation pref: ' + userData.living;
+document.getElementById("transportation").innerHTML = 'Transportation pref: ' + userData.transportation;
+document.getElementById("priceActivities-from").innerHTML = 'Attractions Price Low: $' + userData.activityLowPrice;
+document.getElementById("priceActivities-to").innerHTML = 'Attractions Price High: $' + userData.activityHighPrice;
+
+// Display Flight Data
+document.getElementById("airline").innerHTML = 'Airline: ' + flightData.airline;
+document.getElementById("path").innerHTML = 'Path: ' + flightData.path;
+document.getElementById("dep").innerHTML = flightData.dep;
+document.getElementById("arr").innerHTML = flightData.arr;
+document.getElementById("price").innerHTML = 'Price: ' + flightData.price;
+
+// Display Attraction Data
+for (let i = 0; i < attractionData.length; i++) {
+    var label1 = document.createElement('label');
+    var label2 = document.createElement('label');
+    var label3 = document.createElement('label');
+    var label4 = document.createElement('label');
+
+    var par = document.getElementsByClassName("user-itinerary1")[0];
+
+    label1.innerHTML = 'Name: ' + attractionData[i].activityName;
+    label2.innerHTML = 'Location: ' + attractionData[i].activityLocation;
+    label3.innerHTML = 'Date/Time: ' + attractionData[i].activityDateTime;
+    label4.innerHTML = 'Price: ' + attractionData[i].activityPrice;
+
+    par.appendChild(label1);
+    par.appendChild(createBr());
+    par.appendChild(createBr());
+    par.appendChild(label2);
+    par.appendChild(createBr());
+    par.appendChild(createBr());
+    par.appendChild(label3);
+    par.appendChild(createBr());
+    par.appendChild(createBr());
+    par.appendChild(label4);
+    par.appendChild(createBr());
+    par.appendChild(createBr());
+    par.appendChild(createBr());
+    par.appendChild(createBr());
+}
+
+// Display Hotel Data
+var label1 = document.createElement('label');
+var label2 = document.createElement('label');
+var label3 = document.createElement('label');
+var label4 = document.createElement('label');
+var label5 = document.createElement('label');
+
+var par = document.getElementsByClassName("user-itinerary1")[0];
+label1.innerHTML = '<b>Hotel Data</b>'; 
+label2.innerHTML = 'Type: ' + hotelData.hotelType;
+label3.innerHTML = 'Name: ' + hotelData.hotelName;
+label4.innerHTML = 'Location: ' + hotelData.hotelLocation;
+label5.innerHTML = 'Price (per night): ' + hotelData.hotelPrice;
+
+par.appendChild(label1);
+par.appendChild(createBr());
+par.appendChild(createBr());
+par.appendChild(label2);
+par.appendChild(createBr());
+par.appendChild(createBr());
+par.appendChild(label3);
+par.appendChild(createBr());
+par.appendChild(createBr());
+par.appendChild(label4);
+par.appendChild(createBr());
+par.appendChild(createBr());
+par.appendChild(label5);
+console.log(document.getElementsByClassName("user-itinerary1")[0].clientHeight);
+var it = document.getElementsByClassName("user-itinerary")[0].clientHeight;
+var it1 = document.getElementsByClassName("user-itinerary1")[0].clientHeight;
+var size = (it > it1) ? it : it1;
+document.getElementsByClassName("info")[0].style.paddingBottom = size + "px";
 
 function addNewDay() {
+    var userData = JSON.parse(sessionStorage.getItem('userTravelData'));
+    var startDate = userData.startDate;
+    var endDate = userData.endDate;
+
     var divDayContainer = document.createElement('div')
     var dateInput = document.createElement('input')
     var locInput = document.createElement('input')
@@ -12,7 +109,8 @@ function addNewDay() {
 
     divDayContainer.setAttribute('class', 'create-itinerary-day-container')
     dateInput.setAttribute('name', 'date')
-    dateInput.setAttribute('min', '2018-01-12')
+    dateInput.setAttribute('min', startDate)
+    dateInput.setAttribute('max', endDate)
     locInput.setAttribute('name', 'location')
 
     dateInput.type = 'date'
@@ -80,6 +178,8 @@ function createBr() {
 function finish() {
     days = document.getElementsByClassName('create-itinerary-day-container')
     var itinerary = []
+    var validData = 1;
+
     for (let i = 0; i < days.length; i++) {
         // access the day and it's details
         var day = days[i];
@@ -87,6 +187,16 @@ function finish() {
         var date = inputs[0].value
         var location = inputs[1].value
         var divs = getListOfElements(day.children, "div")
+
+        if (location === "") {
+            validData = 0;
+            break;
+        }
+
+        if (date === "") {
+            validData = 0;
+            break;
+        }
         // access the events of that day
         var itineraryEvents = []
         for (let x = 0; x < divs.length; x++) {
@@ -94,6 +204,17 @@ function finish() {
             var inputs_day = getListOfElements(dayEvent.children, "input")
             var time = inputs_day[0].value
             var details = inputs_day[1].value
+
+            if (time === "") {
+                validData = 0;
+                break;
+            }
+
+            if (details === "") {
+                validData = 0;
+                break;
+            }
+
             itineraryEvents.push(
                 {
                     "time": time,
@@ -109,8 +230,13 @@ function finish() {
             }
         )
     }
-    window.sessionStorage.setItem("itinerary", JSON.stringify(itinerary))
-    window.location.href = "verify.html"
+
+    if (validData) {
+        sessionStorage.setItem("itinerary", JSON.stringify(itinerary))
+        window.location.href = "verify.html"
+    } else {
+        alert("Missing an input field, go back and double check all inputs are filled in!");
+    }
 }
 
 function getListOfElements(searchSpace, name) {
@@ -122,4 +248,14 @@ function getListOfElements(searchSpace, name) {
         }
     }
     return result
+}
+
+console.log("local storage");
+for (i = 0; i < localStorage.length; i++)   {
+    console.log(localStorage.key(i) + "=[" + localStorage.getItem(localStorage.key(i)) + "]");
+}
+
+console.log("session storage");
+for (i = 0; i < sessionStorage.length; i++) {
+    console.log(sessionStorage.key(i) + "=[" + sessionStorage.getItem(sessionStorage.key(i)) + "]");
 }

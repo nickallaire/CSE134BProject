@@ -77,6 +77,8 @@
     <Content Include="travelAgentCreateItinerary.js" />
     <Content Include="travelagenthotels.html" />
     <Content Include="travelagenthotels.js" />
+    <Content Include="verify.js" />
+    <Content Include="success.js" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">

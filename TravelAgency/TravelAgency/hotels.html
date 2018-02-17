@@ -14,6 +14,10 @@
         <div class="list">
             <ul>
                 <li><a href="index.html">Home</a></li>
+                <li><a href="flightdata.html">Flight Data</a></li>
+                <li><a href="attractions.html">Attraction Data</a></li>
+                <li><a href="hotels.html">Hotel Data</a></li>
+                <li><a href="checkout.html">Checkout</a></li>
             </ul>
         </div>
 
@@ -46,51 +50,9 @@
 
         <div class="hotels-container info">
             <h1>Hotels</h1>
-            <form name="hotel" action="travelAgentCreateItinerary.html" method="get">
-                <table class="hotel-table">
-                    <tr class="hotel-row">
-                        <td class="hotel-cell">
-                            <input type="checkbox" name="hotel1" />
-                            <h2>Hyatt</h2>
-                            <h3>711 Waverly Place, London</h3>
-                            <h2>$69</h2>
-                        </td>
-                        <td class="hotel-cell">
-                            <input type="checkbox" name="hotel2" />
-                            <h2>Marriott</h2>
-                            <h3>1234 Mason Ave, London</h3>
-                            <h2>$72</h2>
-                        </td>
-                        <td class="hotel-cell">
-                            <input type="checkbox" name="hotel3" />
-                            <h2>W Hotel</h2>
-                            <h3>6543 South 11th Street, London</h3>
-                            <h2>$87</h2>
-                        </td>
-                    </tr>
-                    <tr class="hotel-row">
-                        <td class="hotel-cell">
-                            <input type="checkbox" name="hotel1" />
-                            <h2>Rits Carlton</h2>
-                            <h3>34564 5th Street, London</h3>
-                            <h2>$101</h2>
-                        </td>
-                        <td class="hotel-cell">
-                            <input type="checkbox" name="hotel2" />
-                            <h2>Super 8</h2>
-                            <h3>999 Nowhere, London</h3>
-                            <h2>$63</h2>
-                        </td>
-                        <td class="hotel-cell">
-                            <input type="checkbox" name="hotel3" />
-                            <h2>Hilton</h2>
-                            <h3>9234 Have Ave, London</h3>
-                            <h2>$87</h2>
-                        </td>
-                    </tr>
-                </table>
-                <input type="submit" value="Next" class="button centered-button" />
-            </form>
+            <table class="hotel-table">
+            </table>
+            <button onclick="checkData()" class="button centered-button">Select Hotel</button>
         </div>
 
         <div class="chatbox" id="chat">

@@ -13,7 +13,10 @@
             </div>
             <div class="list">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li class="travel-agent-list"><a href="travelagentflights.html">Flights</a></li>
+                    <li class="travel-agent-list"><a href="travelagentattractions.html">Attractions</a></li>
+                    <li class="travel-agent-list"><a href="travelagenthotels.html">Accomodations</a></li>
+                    <li class="travel-agent-list"><a href="travelAgentCreateItinerary.html">Itinerary</a></li>
                 </ul>
             </div>
 
@@ -45,12 +48,37 @@
                 </div>
             </div>
 
+            <div class="user-itinerary">
+                <label style=""><b>Customer Data</b></label><br /><br />
+                <label id="current-location"></label><br /><br />
+                <label id="travel-destination"></label><br /><br />
+                <label id="departure-date"></label><br /><br />
+                <label id="return-date"></label><br /><br />
+                <label id="priceFlights-from"></label><br /><br />
+                <label id="priceFlights-to"></label><br /><br />
+                <label id="living"></label><br /><br />
+                <label id="transportation"></label><br /><br />
+                <label id="priceActivities-from"></label><br /><br />
+                <label id="priceActivities-to"></label><br /><br /><br /><br />
+
+                <label style=""><b>Flight Data</b></label><br /><br />
+                <label id="airline"></label><br /><br />
+                <label id="path"></label><br /><br />
+                <label id="dep"></label><br /><br />
+                <label id="arr"></label><br /><br />
+                <label id="price"></label><br /><br /><br /><br />
+            </div>
+
+            <div class="user-itinerary1">
+                <label style=""><b>Attraction Data</b></label><br /><br />
+            </div>
+
             <div class="info">
                 <div class="create-itinerary-container">
                     <h1>Create Itinerary</h1>
                     <div class="create-itinerary-day-container">
                         Enter Date:
-                        <input type="date" name="date" min="2018-01-12" /><br /><br />
+                        <input id="date" type="date" name="date" /><br /><br />
                         Enter Location:
                         <input type="text" name="location" /><br /><br />
                         <div class="create-itinerary-day-event">

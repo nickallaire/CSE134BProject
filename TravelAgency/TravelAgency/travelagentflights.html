@@ -13,6 +13,43 @@
                 <div class="title">Travel Agency</div>
             </div>
 
+            <div class="list">
+                <ul>
+                    <li class="travel-agent-list"><a href="travelagentflights.html">Flights</a></li>
+                    <li class="travel-agent-list"><a href="travelagentattractions.html">Attractions</a></li>
+                    <li class="travel-agent-list"><a href="travelagenthotels.html">Accomodations</a></li>
+                    <li class="travel-agent-list"><a href="travelAgentCreateItinerary.html">Itinerary</a></li>
+                </ul>
+            </div>
+
+            <div class="status-container">
+                <div class="statusbar-label-container">
+                    <p class="statusbar-label">Personal Info</p>
+                    <p class="statusbar-label">Travel Info</p>
+                    <p class="statusbar-label">Flight Results</p>
+                    <p class="statusbar-label">Attractions</p>
+                    <p class="statusbar-label">Hotels</p>
+                    <p class="statusbar-label">Verify</p>
+                    <p class="statusbar-label">Check Out</p>
+                </div>
+                <div class="statusbar-container">
+                    <div class="rectangle-filled"></div>
+                    <div class="circle-filled"></div>
+                    <div class="rectangle-filled"></div>
+                    <div class="circle-filled"></div>
+                    <div class="rectangle-filled"></div>
+                    <div class="circle-empty"></div>
+                    <div class="rectangle-empty"></div>
+                    <div class="circle-empty"></div>
+                    <div class="rectangle-empty"></div>
+                    <div class="circle-empty"></div>
+                    <div class="rectangle-empty"></div>
+                    <div class="circle-empty"></div>
+                    <div class="rectangle-empty"></div>
+                    <div class="circle-empty"></div>
+                </div>
+            </div>
+
             <div class="user-flights">
                 <label style=""><b>Customer Data</b></label><br /><br />
                 <label id="current-location"></label><br /><br />
@@ -46,7 +83,7 @@
                 </div>
             </div>
 
-            <div class="info">
+            <div class="travel-agent-info">
                 <br />
                 <button id="add-flights" onclick="addNewFlight()">Add Flight</button>
                 <br /><br />
@@ -68,26 +105,7 @@
                 <h1>Copyright &copy; TravelAgency.com</h1>
             </div>
         </div>
-
-        <script>
-            function alterChatbox() {
-                var chat = document.getElementById('chat');
-                var chatMessage = document.getElementById('chat-message');
-                var chatContent = document.getElementById('chat-content');
-                var chatButton = document.getElementById('chat-button');
-
-                if (chatMessage.style.display === "none") {
-                    chatMessage.style.display = "block";
-                    chatContent.style.display = "block";
-                    chatButton.style.bottom = "240px";
-                } else {
-                    chatMessage.style.display = "none";
-                    chatContent.style.display = "none";
-                    chatButton.style.bottom = "0px";
-                }
-            }
-        </script>
-
+        <script src="chatbox.js"></script>
         <script src="travelagentflights.js"></script>
     </body>
 </html>

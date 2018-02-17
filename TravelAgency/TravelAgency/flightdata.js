@@ -42,7 +42,7 @@ function createDiv(varAirline, varArrivTime, varArrival, varDepartTime, varDepar
     airline.innerHTML = varAirline;
     path.innerHTML = varDeparture + '&rarr;' + varArrival;
     depart.innerHTML = 'Departs: ' + varDepartTime;
-    ret.innerHTML = 'Returns: ' + varArrivTime;
+    ret.innerHTML = 'Arrives: ' + varArrivTime;
     price.innerHTML = '$' + varFlightPrice;
 
     var par = document.getElementsByClassName("flight-data-container info")[0];

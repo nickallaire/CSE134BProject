@@ -8,8 +8,8 @@ document.getElementById("priceFlights-from").innerHTML = 'Flight Price Low: ' + 
 document.getElementById("priceFlights-to").innerHTML = 'Flight Price High: ' + userData.priceRangeHigh;
 document.getElementById("living").innerHTML = 'Accomodation preferences: ' + userData.living;
 document.getElementById("transportation").innerHTML = 'Transportation preferences: ' + userData.transportation;
-document.getElementById("priceFlights-from").innerHTML = 'Attractions Price Low: ' + userData.activityLowPrice;
-document.getElementById("priceFlights-to").innerHTML = 'Attractions Price High: ' + userData.activityHighPrice;
+document.getElementById("priceActivities-from").innerHTML = 'Attractions Price Low: ' + userData.activityLowPrice;
+document.getElementById("priceActivities-to").innerHTML = 'Attractions Price High: ' + userData.activityHighPrice;
 
 function addNewAttraction() {
     var div = document.createElement('div');
