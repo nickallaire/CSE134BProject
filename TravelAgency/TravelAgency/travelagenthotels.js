@@ -1,5 +1,4 @@
 ﻿sessionStorage.setItem('accomodation-count', 1);
-sessionStorage.setItem('flight-count', 1);
 sessionStorage.setItem('travelAgent', 1);
 var userData = JSON.parse(sessionStorage.getItem('userTravelData'));
 document.getElementById("current-location").innerHTML = 'Customer Location: ' + userData.current;
@@ -104,6 +103,18 @@ function checkData() {
 function createBr() {
     var br = document.createElement('br');
     return br;
+}
+
+function deleteDiv() {
+    var par = document.getElementsByClassName("accomodation-container")[0];
+    if (par.childElementCount > 2) {
+        par.removeChild(par.lastChild);
+        var count = sessionStorage.getItem('accomodation-count');
+        count = Number(count) - 1;
+        sessionStorage.setItem('accomodation-count', count);
+    } else {
+        alert("Must enter at least 1 accomodation");
+    }
 }
 
 console.log("local storage");

@@ -126,6 +126,18 @@ function createBr() {
     return br;
 }
 
+function deleteDiv() {
+    var par = document.getElementsByClassName("flight-container")[0];
+    if (par.childElementCount > 2) {
+        par.removeChild(par.lastChild);
+        var count = sessionStorage.getItem('flight-count');
+        count = Number(count) - 1;
+        sessionStorage.setItem('flight-count', count);
+    } else {
+        alert("Must enter at least 1 flight");
+    }
+}
+
 console.log("local storage");
 for (i = 0; i < localStorage.length; i++)   {
     console.log(localStorage.key(i) + "=[" + localStorage.getItem(localStorage.key(i)) + "]");

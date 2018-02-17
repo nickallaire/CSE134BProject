@@ -1,4 +1,3 @@
-sessionStorage.setItem('flight-count', 1);
 sessionStorage.setItem('travelAgent', 1);
 var userData = JSON.parse(sessionStorage.getItem('userTravelData'));
 if (userData) {
@@ -100,8 +99,8 @@ if (userData) {
 }
 function addNewDay() {
     var userData = JSON.parse(sessionStorage.getItem('userTravelData'));
-    var startDate = userData.startDate;
-    var endDate = userData.endDate;
+    //var startDate = userData.startDate;
+    //var endDate = userData.endDate;
 
     var divDayContainer = document.createElement('div')
     var dateInput = document.createElement('input')
@@ -254,6 +253,24 @@ function getListOfElements(searchSpace, name) {
         }
     }
     return result
+}
+
+function deleteEvent() {
+    var par = document.getElementsByClassName("create-itinerary-day-container")[0];
+    if (par.childElementCount > 7) {
+        par.removeChild(par.lastChild);
+    } else {
+        alert("Must enter at least 1 event");
+    }
+}
+
+function deleteDay() {
+    var par = document.getElementsByClassName("create-itinerary-container")[0];
+    if (par.childElementCount > 2) {
+        par.removeChild(par.lastChild);
+    } else {
+        alert("Must enter at least 1 day");
+    }
 }
 
 console.log("local storage");

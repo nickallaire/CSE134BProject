@@ -106,6 +106,18 @@ function createBr() {
     return br;
 }
 
+function deleteDiv() {
+    var par = document.getElementsByClassName("attractions-container")[0];
+    if (par.childElementCount > 2) {
+        par.removeChild(par.lastChild);
+        var count = sessionStorage.getItem('attraction-count');
+        count = Number(count) - 1;
+        sessionStorage.setItem('attraction-count', count);
+    } else {
+        alert("Must enter at least 1 activity");
+    }
+}
+
 console.log("local storage");
 for (i = 0; i < localStorage.length; i++)   {
     console.log(localStorage.key(i) + "=[" + localStorage.getItem(localStorage.key(i)) + "]");
