@@ -1,9 +1,5 @@
 ﻿<Properties StartupConfiguration="{5410DB11-C30D-45D8-BD59-D0F4C74C2F46}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="TravelAgency/chatbox.js">
-    <Files>
-      <File FileName="TravelAgency/chatbox.js" Line="1" Column="1" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.TravelAgency PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
